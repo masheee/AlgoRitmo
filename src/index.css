@@ -1,0 +1,27 @@
+:root {
+  --dark: #121212; /* Fondo principal (centro) */
+  --green-light: #1db954; /* Fondo navbar */
+  --green-dark: #0d3a1d; /* Fondo footer */
+  --white: #ffffff; /* Texto */
+
+  --green-hover: #137334; /* Verde más claro hover */
+  --border: #282828; /* Bordes / secciones */
+  --hover: #242424; /* Hover en tarjetas */
+}
+
+.navbar-custom {
+  background-color: var(--green-light);
+}
+
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-dropdown {
+  color: var(--dark);
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .dropdown-item:hover {
+  background-color: var(--green-hover);
+  color: var(--dark);
+}
+
