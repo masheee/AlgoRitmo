@@ -9,6 +9,8 @@
   --hover: #242424; /* Hover en tarjetas */
 }
 
+
+
 .navbar-custom {
   background-color: var(--green-light);
 }
@@ -24,4 +26,10 @@
   background-color: var(--green-hover);
   color: var(--dark);
 }
+
+.bg-footer {
+  background-color: var(--green-dark);
+}
+
+
 
