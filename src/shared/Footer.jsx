@@ -1,41 +1,29 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { Github, Instagram, Linkedin } from "react-bootstrap-icons";
-import "../index.css";
+import "../styles/footer.css";
 
 const Footer = () => {
   return (
-    <footer
-      style={{
-        backgroundColor: "var(--color-surface)",
-        color: "var(--color-muted)",
-        padding: "2rem 0",
-        marginTop: "auto",
-      }}
-    >
+    <footer className="footer-custom">
       <Container>
         <Row>
           {/* Sección 1: Marca */}
           <Col md={4}>
-            <h5 style={{ color: "var(--color-primary)" }}>AlgoRitmo <img
-            src="/1233.png"
-            alt=" AlgoRitmo Icon"
-            style={{
-              width: "35px",
-              height: "35px",
-            }}
-            className="ms-1"
-          /></h5>
+            <h5 className="footer-brand">
+              AlgoRitmo
+              <img src="/logo.png" alt="AlgoRitmo Icon" className="footer-logo" />
+            </h5>
             <p>Tu música, en cualquier momento.</p>
           </Col>
 
           {/* Sección 2: Navegación */}
           <Col md={4}>
             <h6>Enlaces</h6>
-            <ul style={{ listStyle: "none", padding: 0 }}>
-              <li><a href="/" style={{ color: "var(--color-muted)", textDecoration: "none" }}>Inicio</a></li>
-              <li><a href="/catalogo" style={{ color: "var(--color-muted)", textDecoration: "none" }}>Listas</a></li>
-              <li><a href="/about" style={{ color: "var(--color-muted)", textDecoration: "none" }}>Acerca de nosotros</a></li>
-              <li><a href="/login" style={{ color: "var(--color-muted)", textDecoration: "none" }}>Login</a></li>
+            <ul className="footer-links">
+              <li><a href="/" className="footer-link">Inicio</a></li>
+              <li><a href="/catalogo" className="footer-link">Listas</a></li>
+              <li><a href="/about" className="footer-link">Acerca de nosotros</a></li>
+              <li><a href="/login" className="footer-link">Login</a></li>
             </ul>
           </Col>
 
@@ -44,23 +32,23 @@ const Footer = () => {
             <h6>Contacto</h6>
             <p>Email: contacto@musicapp.com</p>
 
-            <div style={{ display: "flex", gap: "1rem", marginTop: "0.5rem" }}>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" style={{ color: "var(--color-muted)", fontSize: "1.5rem" }}>
+            <div className="footer-socials">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
                 <Github />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{ color: "var(--color-muted)", fontSize: "1.5rem" }}>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                 <Instagram />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style={{ color: "var(--color-muted)", fontSize: "1.5rem" }}>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                 <Linkedin />
               </a>
             </div>
           </Col>
         </Row>
 
-        <hr style={{ borderColor: "var(--color-muted)" }} />
+        <hr className="footer-divider" />
 
-        <p className="text-center" style={{ margin: 0 }}>
+        <p className="text-center footer-copy">
           © 2025 AlgoRitmoApp - Todos los derechos reservados
         </p>
       </Container>

@@ -10,13 +10,16 @@
   --color-danger: #f43f5e;    /* Rojo error */
 }
 
-#root{
+/*----------ESTO ES PARA BAJAR EL FOOTEER------------*/
+#root {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-main{
+main {
     flex-grow: 1;
     background-color: var(--color-bg);
 }
+/*----------------------------------------------------*/
+
