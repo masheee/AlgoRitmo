@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { Github, Instagram, Linkedin } from "react-bootstrap-icons";
-import "../styles/footer.css";
+import "../../styles/footer.css";
 
 const Footer = () => {
   return (
