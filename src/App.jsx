@@ -1,16 +1,14 @@
+import { Container, Button, Card } from "react-bootstrap";
 import Menu from "./shared/Menu";
 import Footer from "./shared/Footer";
+import Main from "./components/Main"
 
-function App() {
+export default function AppLayout() {
   return (
     <>
-      <Menu></Menu>
-      <main className="container ">
-        <h1 className="text-center my-3">Steaming de Musica</h1>
-      </main>
-      <Footer></Footer>
+      <Menu />
+      <Main></Main>
+      <Footer />
     </>
   );
 }
-
-export default App;
