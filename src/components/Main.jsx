@@ -7,7 +7,7 @@ const Main = () => {
     <>
       <main style={{ padding: "2rem 0", flex: "1" }}>
         <Container>
-          <p className="text-center fs-5 ">Hola Aqui va el MAIN</p>
+          <p className="text-center fs-5">Hola Aqui va el MAIN</p>
         </Container>
       </main>
     </>
