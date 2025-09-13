@@ -1,0 +1,32 @@
+.navbar-custom {
+  background-color: var(--color-surface);
+}
+
+.navbar-brand-custom {
+  color: var(--color-primary) !important;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 35px;
+  height: 35px;
+  margin-right: 8px;
+}
+
+.nav-link-custom {
+  color: var(--color-text) !important;
+}
+
+/* Botón de ingresar */
+.btn-login {
+  background-color: var(--color-primary);
+  border: none;
+  color: #fff;
+}
+
+.btn-login:hover {
+  background-color: var(--color-accent);
+}
+
