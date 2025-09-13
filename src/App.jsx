@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
-import Menu from "./shared/Menu";
-import Footer from "./shared/Footer";
+import Menu from "./components/shared/Menu";
+import Footer from "./components/shared/Footer";
 
 export default function AppLayout() {
   return (

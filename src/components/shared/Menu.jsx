@@ -2,7 +2,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
-import "../styles/menu.css";
+import "../../styles/menu.css";
 
 const Menu = () => {
   return (
