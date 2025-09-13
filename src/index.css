@@ -1,0 +1,22 @@
+:root {
+  --color-primary: #8b5cf6;   /* Violeta principal (medio brillante) */
+  --color-secondary: #a78bfa; /* Lila claro */
+  --color-bg: #0a0a0f;        /* Fondo oscuro (casi negro, con tinte azulado) */
+  --color-surface: #1e1b29;   /* Paneles/cards (violeta muy oscuro) */
+  --color-text: #f3f4f6;      /* Texto principal (blanco grisáceo) */
+  --color-muted: #9ca3af;     /* Texto secundario (gris) */
+  --color-accent: #e879f9;    /* Magenta brillante para botones/hover */
+  --color-success: #34d399;   /* Verde éxito */
+  --color-danger: #f43f5e;    /* Rojo error */
+}
+
+#root{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex-grow: 1;
+    background-color: var(--color-bg);
+}
