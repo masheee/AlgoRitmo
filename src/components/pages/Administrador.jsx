@@ -1,13 +1,26 @@
 import React from 'react';
-import { Button, Table } from "react-bootstrap";
-
+import { Button, Form, Table } from "react-bootstrap";
+import "../../styles/admin.css";
 const Administrador = () => {
     return (
         <section className='container'>
             <div className='d-flex justify-content-between mt-4'>
-                <h1>Administración</h1>
-                <Button variant='success' className='py-0'>Agregar Canción</Button>
+                <h1>Administración de Canciones</h1>
+                <Button variant='success' className='py-0 admin-button'>Agregar Canción</Button>
             </div>
+
+            <div className="mt-4">
+                <Form className="d-flex">
+                    <Form.Control
+                        type="search"
+                        placeholder="Buscar canción..."
+                        className="me-2 admin-control-buscar"
+                        aria-label="Buscar"
+                    />
+                    <Button variant='success'>Buscar</Button>
+                </Form>
+            </div>
+
 
             <Table responsive striped bordered hover variant="dark" className='mt-4'>
                 <thead>
@@ -28,10 +41,10 @@ const Administrador = () => {
                         <td>Rock</td>
                         <td>5:55</td>
                         <td className="text-center">
-                            <Button variant='success' className='me-2'>
+                            <Button  className='me-2 admin-button-edit'>
                                 <i className="bi bi-pencil-square"></i>
                             </Button>
-                            <Button variant="danger">
+                            <Button className='admin-button-trash'>
                             <i className="bi bi-trash"></i>
                             </Button>
                         </td>
@@ -43,10 +56,10 @@ const Administrador = () => {
                         <td>Pop</td>
                         <td>4:23</td>
                         <td className="text-center">
-                            <Button variant='success' className='me-2'>
-                                <i className="bi bi-pencil-square"></i>
+                            <Button variant='success' className='me-2 admin-button-edit'>
+                                <i className="bi bi-pencil-square "></i>
                             </Button>
-                            <Button variant="danger">
+                            <Button className='admin-button-trash'>
                             <i className="bi bi-trash"></i>
                             </Button>
                         </td>
@@ -59,10 +72,10 @@ const Administrador = () => {
                         <td>Synth-pop</td>
                         <td>3:20</td>
                         <td className="text-center">
-                            <Button variant='success' className='me-2'>
+                            <Button variant='success' className='me-2 admin-button-edit'>
                                 <i className="bi bi-pencil-square"></i>
                             </Button>
-                            <Button variant="danger">
+                            <Button className='admin-button-trash'>
                             <i className="bi bi-trash"></i>
                             </Button>
                         </td>
