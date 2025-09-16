@@ -48,6 +48,10 @@ main {
   box-shadow: 3px 3px 20px var(--color-primary);
 }
 
+.fuenteCardNosotros{
+  font-size: medium;
+}
+
 .AlgoRitmo {
   color: var(--color-primary);
 }

@@ -4,6 +4,7 @@ import MarianoJuarez from "../../img/MarianoJuarez.jpg";
 import MaximilianoGomezTolra from "../../img/MaximilianoGomezTolra.jpg";
 import MaximilianoGuerrero from "../../img/MaximilianoGuerrero.jpg";
 import SebastianFlomenbaun from "../../img/SebastianFlomenbaun.jpg";
+import JoseLedesma from "../../img/JoseLedesma.jpg";
 
 const Nosotros = () => {
   return (
@@ -28,11 +29,11 @@ const Nosotros = () => {
         no solo escuchás música: vivís tu propio ritmo.
       </p>
 
-      <Container>
+      <Container className="mb-5">
         <Row>
           {/*Maxi Tolra*/}
           <Col xs={12} md={4} lg={2}>
-            <Card className="cardNosotros m-4">
+            <Card className="cardNosotros h-100">
               <Card.Img
                 variant="top"
                 className="imgCardNosotros mt-3"
@@ -40,7 +41,7 @@ const Nosotros = () => {
                 alt="Maxi Tolra"
               />
               <Card.Body>
-                <Card.Title>Maximiliano Gómez Tolra</Card.Title>
+                <Card.Title className="fuenteCardNosotros">Maximiliano Gómez Tolra</Card.Title>
                 <Row>
                   <Col xs={6} className="text-center">
                     <a
@@ -66,7 +67,7 @@ const Nosotros = () => {
           </Col>
           {/*Tali*/}
           <Col xs={12} md={4} lg={2}>
-            <Card className="cardNosotros m-4">
+            <Card className="cardNosotros h-100">
               <Card.Img
                 variant="top"
                 className="imgCardNosotros mt-3"
@@ -74,7 +75,7 @@ const Nosotros = () => {
                 alt="Tali Cabana"
               />
               <Card.Body>
-                <Card.Title>Paula Cabana</Card.Title>
+                <Card.Title className="fuenteCardNosotros">Paula Cabana</Card.Title>
                 <Row>
                   <Col xs={6} className="text-center">
                     <a
@@ -100,7 +101,7 @@ const Nosotros = () => {
           </Col>
           {/*Sebas*/}
           <Col xs={12} md={4} lg={2}>
-            <Card className="cardNosotros m-4">
+            <Card className="cardNosotros h-100">
               <Card.Img
                 variant="top"
                 className="imgCardNosotros mt-3"
@@ -108,7 +109,7 @@ const Nosotros = () => {
                 alt="Sebas Flomenbaun"
               />
               <Card.Body>
-                <Card.Title>Sebastián Flomenbaun</Card.Title>
+                <Card.Title className="fuenteCardNosotros">Sebastián Flomenbaun</Card.Title>
                 <Row>
                   <Col xs={6} className="text-center">
                     <a
@@ -134,7 +135,7 @@ const Nosotros = () => {
           </Col>
           {/*Pollo*/}
           <Col xs={12} md={4} lg={2}>
-            <Card className="cardNosotros m-4">
+            <Card className="cardNosotros h-100">
               <Card.Img
                 variant="top"
                 className="imgCardNosotros mt-3"
@@ -142,7 +143,7 @@ const Nosotros = () => {
                 alt="Pollo Juárez"
               />
               <Card.Body>
-                <Card.Title>Mariano Juárez</Card.Title>
+                <Card.Title className="fuenteCardNosotros">Mariano Juárez</Card.Title>
                 <Row>
                   <Col xs={6} className="text-center">
                     <a
@@ -168,7 +169,7 @@ const Nosotros = () => {
           </Col>
           {/*Maxi G*/}
           <Col xs={12} md={4} lg={2}>
-            <Card className="cardNosotros m-4">
+            <Card className="cardNosotros h-100">
               <Card.Img
                 variant="top"
                 className="imgCardNosotros mt-3"
@@ -176,7 +177,7 @@ const Nosotros = () => {
                 alt="Maxi Guerrero"
               />
               <Card.Body>
-                <Card.Title>Maximiliano Guerrero</Card.Title>
+                <Card.Title className="fuenteCardNosotros">Maximiliano Guerrero</Card.Title>
                 <Row>
                   <Col xs={6} className="text-center">
                     <a
@@ -200,17 +201,17 @@ const Nosotros = () => {
               </Card.Body>
             </Card>
           </Col>
-          {/*José I*/}
+          {/*José I  Faltan imagen y links*/}
           <Col xs={12} md={4} lg={2}>
-            <Card className="cardNosotros m-4">
+            <Card className="cardNosotros h-100">
               <Card.Img
                 variant="top"
                 className="imgCardNosotros mt-3"
-                src={PaulaCabana}
-                alt="Tali Cabana"
+                src={JoseLedesma}
+                alt="José Ingnacio Ledesma Padilla"
               />
               <Card.Body>
-                <Card.Title>Paula Cabana</Card.Title>
+                <Card.Title className="fuenteCardNosotros">José Ingnacio Ledesma Padilla</Card.Title>
                 <Row>
                   <Col xs={6} className="text-center">
                     <a
