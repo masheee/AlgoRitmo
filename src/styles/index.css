@@ -22,4 +22,30 @@ main {
     background-color: var(--color-bg);
 }
 /*----------------------------------------------------*/
+ 
+/*------------------Cards Nosotros-------------------*/
+.cardNosotros{
+    border-color: var(--color-secondary);
+    color: var(--color-accent);
 
+}
+
+.imgCardNosotros {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: var(--color-accent);
+
+}
+
+.AlgoRitmo{
+  color: var(--color-primary);
+}
+
+.AlgoRitmo:hover{
+    color: var(--color-success);
+}
