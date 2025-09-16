@@ -43,7 +43,7 @@ const Nosotros = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <i className="bi bi-github"></i>
+                      <i className="bi bi-github iconoCard"></i>
                     </a>
                   </Col>
                   <Col xs={6} className="text-center">
@@ -52,7 +52,7 @@ const Nosotros = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <i className="bi bi-linkedin"></i>
+                      <i className="bi bi-linkedin iconoCard"></i>
                     </a>
                   </Col>
                 </Row>
@@ -76,7 +76,7 @@ const Nosotros = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <i className="bi bi-github"></i>
+                      <i className="bi bi-github iconoCard"></i>
                     </a>
                   </Col>
                   <Col xs={6} className="text-center">
@@ -85,13 +85,13 @@ const Nosotros = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <i className="bi bi-linkedin"></i>
+                      <i className="bi bi-linkedin iconoCard"></i>
                     </a>
                   </Col>
                 </Row>
               </Card.Body>
             </Card>
-          </Col>{" "}
+          </Col>
           <Col xs={12} md={4} lg={2}>
             <Card className="cardNosotros m-4">
               <Card.Img
@@ -109,7 +109,7 @@ const Nosotros = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <i className="bi bi-github"></i>
+                      <i className="bi bi-github iconoCard"></i>
                     </a>
                   </Col>
                   <Col xs={6} className="text-center">
@@ -118,13 +118,13 @@ const Nosotros = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <i className="bi bi-linkedin"></i>
+                      <i className="bi bi-linkedin iconoCard"></i>
                     </a>
                   </Col>
                 </Row>
               </Card.Body>
             </Card>
-          </Col>{" "}
+          </Col>
           <Col xs={12} md={4} lg={2}>
             <Card className="cardNosotros m-4">
               <Card.Img
@@ -142,7 +142,7 @@ const Nosotros = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <i className="bi bi-github"></i>
+                      <i className="bi bi-github iconoCard"></i>
                     </a>
                   </Col>
                   <Col xs={6} className="text-center">
@@ -151,13 +151,13 @@ const Nosotros = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <i className="bi bi-linkedin"></i>
+                      <i className="bi bi-linkedin iconoCard"></i>
                     </a>
                   </Col>
                 </Row>
               </Card.Body>
             </Card>
-          </Col>{" "}
+          </Col>
           <Col xs={12} md={4} lg={2}>
             <Card className="cardNosotros m-4">
               <Card.Img
@@ -175,7 +175,7 @@ const Nosotros = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <i className="bi bi-github"></i>
+                      <i className="bi bi-github iconoCard"></i>
                     </a>
                   </Col>
                   <Col xs={6} className="text-center">
@@ -184,13 +184,13 @@ const Nosotros = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <i className="bi bi-linkedin"></i>
+                      <i className="bi bi-linkedin iconoCard"></i>
                     </a>
                   </Col>
                 </Row>
               </Card.Body>
             </Card>
-          </Col>{" "}
+          </Col>
           <Col xs={12} md={4} lg={2}>
             <Card className="cardNosotros m-4">
               <Card.Img
@@ -208,7 +208,7 @@ const Nosotros = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <i className="bi bi-github"></i>
+                      <i className="bi bi-github iconoCard"></i>
                     </a>
                   </Col>
                   <Col xs={6} className="text-center">
@@ -217,7 +217,7 @@ const Nosotros = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <i className="bi bi-linkedin"></i>
+                      <i className="bi bi-linkedin iconoCard"></i>
                     </a>
                   </Col>
                 </Row>
