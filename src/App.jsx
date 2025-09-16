@@ -1,7 +1,11 @@
 import { Container } from "react-bootstrap";
 import Menu from "./components/shared/Menu";
 import Footer from "./components/shared/Footer";
+<<<<<<< HEAD
 import Administrador from "./components/pages/Administrador";
+=======
+import Nosotros from "./components/pages/Nosotros";
+>>>>>>> nosotros
 
 export default function AppLayout() {
   return (
@@ -12,6 +16,7 @@ export default function AppLayout() {
           <p className="text-center fs-5">Hola Aqui va el MAIN</p>
         </Container>
       </main>
+
       <Footer />
     </>
   );
