@@ -11,7 +11,6 @@ export default function AppLayout() {
         <Container>
           <p className="text-center fs-5">Hola Aqui va el MAIN</p>
         </Container>
-        <Nosotros></Nosotros>
       </main>
 
       <Footer />
