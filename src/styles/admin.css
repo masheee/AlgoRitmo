@@ -48,3 +48,29 @@ h1{
     
     box-shadow:  0 0 0 0.1rem var(--color-success);
 }
+
+/* Encabezado */
+.admin-table thead tr th {
+  background-color: #4b2f70;
+  color: #fff;
+}
+
+/* Filas impares */
+.admin-table tbody tr:nth-child(odd) td {
+  background-color: #2e1a47;
+  color: #fff;
+}
+
+/* Filas pares */
+.admin-table tbody tr:nth-child(even) td {
+  background-color: #3c2461;
+  color: #fff;
+}
+
+/* Hover */
+.admin-table tbody tr:hover td {
+  
+  color: var(--color-primary);
+}
+
+

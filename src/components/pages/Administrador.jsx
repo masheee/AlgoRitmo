@@ -4,25 +4,28 @@ import "../../styles/admin.css";
 const Administrador = () => {
     return (
         <section className='container'>
-            <div className='d-flex justify-content-between mt-4'>
+            <div className='d-flex justify-content-around mt-4'>
                 <h1>Administración de Canciones</h1>
                 <Button variant='success' className='py-0 admin-button'>Agregar Canción</Button>
             </div>
 
             <div className="mt-4">
-                <Form className="d-flex">
-                    <Form.Control
+                <Form className="row g-2">
+                    <div className="col-12 col-lg-6 col-md-8  d-flex">
+                        <Form.Control
                         type="search"
                         placeholder="Buscar canción..."
                         className="me-2 admin-control-buscar"
                         aria-label="Buscar"
                     />
-                    <Button variant='success'>Buscar</Button>
+                        <Button className='admin-button'>Buscar</Button>
+                    </div>
+                    
                 </Form>
             </div>
 
 
-            <Table responsive striped bordered hover variant="dark" className='mt-4'>
+            <Table responsive bordered hover variant="dark" className='mt-4 admin-table'>
                 <thead>
                     <tr className="text-center">
                         <th>Código</th>
