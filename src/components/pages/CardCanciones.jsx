@@ -15,7 +15,8 @@ const CardCanciones = () => {
   );
 
   /* muestra solo las canciones filtradas, osea si encontro alguna coincidencia */
-  const soloSeleccionada = busqueda.trim() !== "" && cancionesFiltradas.length > 0;
+  const soloSeleccionada =
+    busqueda.trim() !== "" && cancionesFiltradas.length > 0;
 
   /* se deja solo las canciones que coinciden con la búsqueda, sino hay coincidencias se muestran todas */
 
