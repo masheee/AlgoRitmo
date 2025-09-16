@@ -27,19 +27,20 @@ main {
 .cardNosotros{
     border-color: var(--color-secondary);
     color: var(--color-accent);
+    text-align: center;
 
 }
 
 .imgCardNosotros {
-  width: 150px;
-  height: 200px;
+  /* max-width:*/ 
+  width: 80px;
+  height:100px ;
   object-fit: cover;
   border-radius: 50%; 
   display: block;
   margin-left: auto;
   margin-right: auto;
   border-color: var(--color-accent);
-
 }
 
 .AlgoRitmo{

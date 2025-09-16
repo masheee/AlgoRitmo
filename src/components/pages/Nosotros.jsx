@@ -1,6 +1,5 @@
-import { Card, Row } from "react-bootstrap";
+import { Container, Card, Row, Col } from "react-bootstrap";
 import PaulaCabana from "../../img/PaulaCabana.jpg";
-import Image from "react-bootstrap/Image";
 
 const Nosotros = () => {
   return (
@@ -18,41 +17,215 @@ const Nosotros = () => {
       </p>
       <br />
       <p>
-        Porque con <a href="/" className="AlgoRitmo text-decoration-none fw-bold">
+        Porque con{" "}
+        <a href="/" className="AlgoRitmo text-decoration-none fw-bold">
           AlgoRitmo
-        </a> no solo escuchás música: vivís tu propio ritmo.
+        </a>{" "}
+        no solo escuchás música: vivís tu propio ritmo.
       </p>
 
-      <Row sm={1} md={3} lg={6} className="g-4">
-        <Card className="cardNosotros text-center">
-          <Card.Img
-            variant="top"
-            className="imgCardNosotros mt-3"
-            src={PaulaCabana}
-            alt="Tali Cabana"
-          />
-          <Card.Body>
-            <Card.Title className="text-center">Paula Cabana</Card.Title>
-            <div>
-              <Row sm={2} md={2} lg={2}>
-                <a
-                  href="https://github.com/TaliCabana"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="bi bi-github"></i>
-                </a>
-                <a 
-                href="https://www.linkedin.com/in/paula-cabana-ingenieraindustrial/" 
-                target="_blank" 
-                rel="noopener noreferrer">
-                <i className="bi bi-linkedin"></i>
-                </a>
-              </Row>
-            </div>
-          </Card.Body>
-        </Card>
-      </Row>
+      <Container>
+        <Row>
+          <Col xs={12} md={4} lg={2}>
+            <Card className="cardNosotros m-4">
+              <Card.Img
+                variant="top"
+                className="imgCardNosotros mt-3"
+                src={PaulaCabana}
+                alt="Tali Cabana"
+              />
+              <Card.Body>
+                <Card.Title>Paula Cabana</Card.Title>
+                <Row>
+                  <Col xs={6} className="text-center">
+                    <a
+                      href="https://github.com/TaliCabana"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="bi bi-github"></i>
+                    </a>
+                  </Col>
+                  <Col xs={6} className="text-center">
+                    <a
+                      href="https://www.linkedin.com/in/paula-cabana-ingenieraindustrial/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="bi bi-linkedin"></i>
+                    </a>
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col xs={12} md={4} lg={2}>
+            <Card className="cardNosotros m-4">
+              <Card.Img
+                variant="top"
+                className="imgCardNosotros mt-3"
+                src={PaulaCabana}
+                alt="Tali Cabana"
+              />
+              <Card.Body>
+                <Card.Title>Paula Cabana</Card.Title>
+                <Row>
+                  <Col xs={6} className="text-center">
+                    <a
+                      href="https://github.com/TaliCabana"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="bi bi-github"></i>
+                    </a>
+                  </Col>
+                  <Col xs={6} className="text-center">
+                    <a
+                      href="https://www.linkedin.com/in/paula-cabana-ingenieraindustrial/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="bi bi-linkedin"></i>
+                    </a>
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+          </Col>{" "}
+          <Col xs={12} md={4} lg={2}>
+            <Card className="cardNosotros m-4">
+              <Card.Img
+                variant="top"
+                className="imgCardNosotros mt-3"
+                src={PaulaCabana}
+                alt="Tali Cabana"
+              />
+              <Card.Body>
+                <Card.Title>Paula Cabana</Card.Title>
+                <Row>
+                  <Col xs={6} className="text-center">
+                    <a
+                      href="https://github.com/TaliCabana"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="bi bi-github"></i>
+                    </a>
+                  </Col>
+                  <Col xs={6} className="text-center">
+                    <a
+                      href="https://www.linkedin.com/in/paula-cabana-ingenieraindustrial/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="bi bi-linkedin"></i>
+                    </a>
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+          </Col>{" "}
+          <Col xs={12} md={4} lg={2}>
+            <Card className="cardNosotros m-4">
+              <Card.Img
+                variant="top"
+                className="imgCardNosotros mt-3"
+                src={PaulaCabana}
+                alt="Tali Cabana"
+              />
+              <Card.Body>
+                <Card.Title>Paula Cabana</Card.Title>
+                <Row>
+                  <Col xs={6} className="text-center">
+                    <a
+                      href="https://github.com/TaliCabana"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="bi bi-github"></i>
+                    </a>
+                  </Col>
+                  <Col xs={6} className="text-center">
+                    <a
+                      href="https://www.linkedin.com/in/paula-cabana-ingenieraindustrial/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="bi bi-linkedin"></i>
+                    </a>
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+          </Col>{" "}
+          <Col xs={12} md={4} lg={2}>
+            <Card className="cardNosotros m-4">
+              <Card.Img
+                variant="top"
+                className="imgCardNosotros mt-3"
+                src={PaulaCabana}
+                alt="Tali Cabana"
+              />
+              <Card.Body>
+                <Card.Title>Paula Cabana</Card.Title>
+                <Row>
+                  <Col xs={6} className="text-center">
+                    <a
+                      href="https://github.com/TaliCabana"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="bi bi-github"></i>
+                    </a>
+                  </Col>
+                  <Col xs={6} className="text-center">
+                    <a
+                      href="https://www.linkedin.com/in/paula-cabana-ingenieraindustrial/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="bi bi-linkedin"></i>
+                    </a>
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+          </Col>{" "}
+          <Col xs={12} md={4} lg={2}>
+            <Card className="cardNosotros m-4">
+              <Card.Img
+                variant="top"
+                className="imgCardNosotros mt-3"
+                src={PaulaCabana}
+                alt="Tali Cabana"
+              />
+              <Card.Body>
+                <Card.Title>Paula Cabana</Card.Title>
+                <Row>
+                  <Col xs={6} className="text-center">
+                    <a
+                      href="https://github.com/TaliCabana"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="bi bi-github"></i>
+                    </a>
+                  </Col>
+                  <Col xs={6} className="text-center">
+                    <a
+                      href="https://www.linkedin.com/in/paula-cabana-ingenieraindustrial/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="bi bi-linkedin"></i>
+                    </a>
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 };
