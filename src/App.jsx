@@ -2,6 +2,10 @@ import { Card, Container } from "react-bootstrap";
 import Menu from "./components/shared/Menu";
 import Footer from "./components/shared/Footer";
 import CardCanciones from "./components/CardCanciones";
+import Administrador from "./components/pages/Administrador";
+import Nosotros from "./components/pages/Nosotros";
+
+
 
 export default function AppLayout() {
   return (
@@ -12,6 +16,7 @@ export default function AppLayout() {
           <CardCanciones />
         </Container>
       </main>
+
       <Footer />
     </>
   );
