@@ -2,7 +2,7 @@ import { Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
-import canciones from "../Data/CancionesInicio.js";
+import canciones from "../../Data/CancionesInicio.js";
 import { useState } from "react";
 
 const CardCanciones = () => {

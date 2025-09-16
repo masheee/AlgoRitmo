@@ -2,7 +2,7 @@ import { Card, Container } from "react-bootstrap";
 import Menu from "./components/shared/Menu";
 import Footer from "./components/shared/Footer";
 import Detalle from "./components/pages/Detalle";
-import CardCanciones from "./components/CardCanciones";
+import CardCanciones from "./components/pages/CardCanciones";
 import Administrador from "./components/pages/Administrador";
 import Nosotros from "./components/pages/Nosotros";
 
