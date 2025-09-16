@@ -1,5 +1,9 @@
 import { Container, Card, Row, Col } from "react-bootstrap";
 import PaulaCabana from "../../img/PaulaCabana.jpg";
+import MarianoJuarez from "../../img/MarianoJuarez.jpg";
+import MaximilianoGomezTolra from "../../img/MaximilianoGomezTolra.jpg";
+import MaximilianoGuerrero from "../../img/MaximilianoGuerrero.jpg";
+import SebastianFlomenbaun from "../../img/SebastianFlomenbaun.jpg";
 
 const Nosotros = () => {
   return (
@@ -26,6 +30,41 @@ const Nosotros = () => {
 
       <Container>
         <Row>
+          {/*Maxi Tolra*/}
+          <Col xs={12} md={4} lg={2}>
+            <Card className="cardNosotros m-4">
+              <Card.Img
+                variant="top"
+                className="imgCardNosotros mt-3"
+                src={MaximilianoGomezTolra}
+                alt="Maxi Tolra"
+              />
+              <Card.Body>
+                <Card.Title>Maximiliano Gómez Tolra</Card.Title>
+                <Row>
+                  <Col xs={6} className="text-center">
+                    <a
+                      href="https://github.com/masheee"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="bi bi-github iconoCard"></i>
+                    </a>
+                  </Col>
+                  <Col xs={6} className="text-center">
+                    <a
+                      href="https://www.linkedin.com/in/maxi-gomez-256a7b37a/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="bi bi-linkedin iconoCard"></i>
+                    </a>
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+          </Col>
+          {/*Tali*/}
           <Col xs={12} md={4} lg={2}>
             <Card className="cardNosotros m-4">
               <Card.Img
@@ -59,20 +98,21 @@ const Nosotros = () => {
               </Card.Body>
             </Card>
           </Col>
+          {/*Sebas*/}
           <Col xs={12} md={4} lg={2}>
             <Card className="cardNosotros m-4">
               <Card.Img
                 variant="top"
                 className="imgCardNosotros mt-3"
-                src={PaulaCabana}
-                alt="Tali Cabana"
+                src={SebastianFlomenbaun}
+                alt="Sebas Flomenbaun"
               />
               <Card.Body>
-                <Card.Title>Paula Cabana</Card.Title>
+                <Card.Title>Sebastián Flomenbaun</Card.Title>
                 <Row>
                   <Col xs={6} className="text-center">
                     <a
-                      href="https://github.com/TaliCabana"
+                      href="https://github.com/duncann555"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -81,7 +121,7 @@ const Nosotros = () => {
                   </Col>
                   <Col xs={6} className="text-center">
                     <a
-                      href="https://www.linkedin.com/in/paula-cabana-ingenieraindustrial/"
+                      href="*"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -92,20 +132,21 @@ const Nosotros = () => {
               </Card.Body>
             </Card>
           </Col>
+          {/*Pollo*/}
           <Col xs={12} md={4} lg={2}>
             <Card className="cardNosotros m-4">
               <Card.Img
                 variant="top"
                 className="imgCardNosotros mt-3"
-                src={PaulaCabana}
-                alt="Tali Cabana"
+                src={MarianoJuarez}
+                alt="Pollo Juárez"
               />
               <Card.Body>
-                <Card.Title>Paula Cabana</Card.Title>
+                <Card.Title>Mariano Juárez</Card.Title>
                 <Row>
                   <Col xs={6} className="text-center">
                     <a
-                      href="https://github.com/TaliCabana"
+                      href="https://github.com/cmjuarez95"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -114,7 +155,7 @@ const Nosotros = () => {
                   </Col>
                   <Col xs={6} className="text-center">
                     <a
-                      href="https://www.linkedin.com/in/paula-cabana-ingenieraindustrial/"
+                      href="*"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -125,20 +166,21 @@ const Nosotros = () => {
               </Card.Body>
             </Card>
           </Col>
+          {/*Maxi G*/}
           <Col xs={12} md={4} lg={2}>
             <Card className="cardNosotros m-4">
               <Card.Img
                 variant="top"
                 className="imgCardNosotros mt-3"
-                src={PaulaCabana}
-                alt="Tali Cabana"
+                src={MaximilianoGuerrero}
+                alt="Maxi Guerrero"
               />
               <Card.Body>
-                <Card.Title>Paula Cabana</Card.Title>
+                <Card.Title>Maximiliano Guerrero</Card.Title>
                 <Row>
                   <Col xs={6} className="text-center">
                     <a
-                      href="https://github.com/TaliCabana"
+                      href="https://github.com/maxiguerrero767"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -147,7 +189,7 @@ const Nosotros = () => {
                   </Col>
                   <Col xs={6} className="text-center">
                     <a
-                      href="https://www.linkedin.com/in/paula-cabana-ingenieraindustrial/"
+                      href="*"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -158,39 +200,7 @@ const Nosotros = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col xs={12} md={4} lg={2}>
-            <Card className="cardNosotros m-4">
-              <Card.Img
-                variant="top"
-                className="imgCardNosotros mt-3"
-                src={PaulaCabana}
-                alt="Tali Cabana"
-              />
-              <Card.Body>
-                <Card.Title>Paula Cabana</Card.Title>
-                <Row>
-                  <Col xs={6} className="text-center">
-                    <a
-                      href="https://github.com/TaliCabana"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i className="bi bi-github iconoCard"></i>
-                    </a>
-                  </Col>
-                  <Col xs={6} className="text-center">
-                    <a
-                      href="https://www.linkedin.com/in/paula-cabana-ingenieraindustrial/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i className="bi bi-linkedin iconoCard"></i>
-                    </a>
-                  </Col>
-                </Row>
-              </Card.Body>
-            </Card>
-          </Col>
+          {/*José I*/}
           <Col xs={12} md={4} lg={2}>
             <Card className="cardNosotros m-4">
               <Card.Img
