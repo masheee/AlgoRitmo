@@ -30,7 +30,7 @@ const Nosotros = () => {
       </p>
 
       <Container className="mb-5">
-        <Row>
+        <Row className="row-gap-3">
           {/*Maxi Tolra*/}
           <Col xs={12} md={4} lg={2}>
             <Card className="cardNosotros h-100">
@@ -41,7 +41,9 @@ const Nosotros = () => {
                 alt="Maxi Tolra"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">Maximiliano Gómez Tolra</Card.Title>
+                <Card.Title className="fuenteCardNosotros">
+                  Maximiliano Gómez Tolra
+                </Card.Title>
                 <Row>
                   <Col xs={6} className="text-center">
                     <a
@@ -75,9 +77,11 @@ const Nosotros = () => {
                 alt="Tali Cabana"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">Paula Cabana</Card.Title>
+                <Card.Title className="fuenteCardNosotros">
+                  Paula Cabana
+                </Card.Title>
                 <Row>
-                  <Col xs={6} className="text-center">
+                  <Col xs={6} className="text-center mb-3">
                     <a
                       href="https://github.com/TaliCabana"
                       target="_blank"
@@ -109,7 +113,9 @@ const Nosotros = () => {
                 alt="Sebas Flomenbaun"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">Sebastián Flomenbaun</Card.Title>
+                <Card.Title className="fuenteCardNosotros">
+                  Sebastián Flomenbaun
+                </Card.Title>
                 <Row>
                   <Col xs={6} className="text-center">
                     <a
@@ -121,11 +127,7 @@ const Nosotros = () => {
                     </a>
                   </Col>
                   <Col xs={6} className="text-center">
-                    <a
-                      href="*"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <a href="*" target="_blank" rel="noopener noreferrer">
                       <i className="bi bi-linkedin iconoCard"></i>
                     </a>
                   </Col>
@@ -143,7 +145,9 @@ const Nosotros = () => {
                 alt="Pollo Juárez"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">Mariano Juárez</Card.Title>
+                <Card.Title className="fuenteCardNosotros">
+                  Mariano Juárez
+                </Card.Title>
                 <Row>
                   <Col xs={6} className="text-center">
                     <a
@@ -155,11 +159,7 @@ const Nosotros = () => {
                     </a>
                   </Col>
                   <Col xs={6} className="text-center">
-                    <a
-                      href="*"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <a href="*" target="_blank" rel="noopener noreferrer">
                       <i className="bi bi-linkedin iconoCard"></i>
                     </a>
                   </Col>
@@ -177,7 +177,9 @@ const Nosotros = () => {
                 alt="Maxi Guerrero"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">Maximiliano Guerrero</Card.Title>
+                <Card.Title className="fuenteCardNosotros">
+                  Maximiliano Guerrero
+                </Card.Title>
                 <Row>
                   <Col xs={6} className="text-center">
                     <a
@@ -189,11 +191,7 @@ const Nosotros = () => {
                     </a>
                   </Col>
                   <Col xs={6} className="text-center">
-                    <a
-                      href="*"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <a href="*" target="_blank" rel="noopener noreferrer">
                       <i className="bi bi-linkedin iconoCard"></i>
                     </a>
                   </Col>
@@ -211,7 +209,9 @@ const Nosotros = () => {
                 alt="José Ingnacio Ledesma Padilla"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">José Ingnacio Ledesma Padilla</Card.Title>
+                <Card.Title className="fuenteCardNosotros">
+                  José Ingnacio Ledesma Padilla
+                </Card.Title>
                 <Row>
                   <Col xs={6} className="text-center">
                     <a
