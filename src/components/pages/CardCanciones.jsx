@@ -5,6 +5,8 @@ import Form from "react-bootstrap/Form";
 import canciones from "../../Data/CancionesInicio.js";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import "../../styles/CardCanciones.css";
+import { set } from "react-hook-form";
 
 const CardCanciones = () => {
   /* estado para buscar el input */
@@ -23,10 +25,12 @@ const CardCanciones = () => {
 
   return (
     <div className="container">
-      <div className=" d-flex justify-content-center align-items-center mt-4  ">
+      <div className=" d-flex justify-content-center align-items-center mt-1  ">
         <Card.Img
           variant="top"
-          src="https://images.pexels.com/photos/1047443/pexels-photo-1047443.jpeg"
+          className="imagenPpal"
+          src="https://images.pexels.com/photos/2747450/pexels-photo-2747450.jpeg"
+          alt="Imagen recital"
         />
       </div>
       <div className="text-center my-5">
@@ -34,8 +38,8 @@ const CardCanciones = () => {
       </div>
 
       {/* buscador */}
-      <div className="mb-5 ">
-        <Form className="d-flex justify-content-end " role="search">
+      <div className="mb-5 d-flex justify-content-center">
+        <Form className="d-flex justify-content-center w-50" role="search">
           <Form.Control
             type="search"
             placeholder="Elegí una canción"
@@ -45,18 +49,25 @@ const CardCanciones = () => {
             /* cada vez que escribo en el input, se actualiza el estado, cada cambio actualiza cancionesSeleccionada */
             onChange={(e) => setBusqueda(e.target.value)}
           />
-          {/* <Button
+          <Button
             variant="outline-primary btn-login"
-            onClick={(e) => e.preventDefault()}
+            onClick={() => setBusqueda("")}
           >
-            Buscá
-          </Button> */}
+            Buscá otra
+          </Button>
         </Form>
       </div>
       {/* grilla */}
-      {soloSeleccionada ? (
+      {busqueda.trim() !== "" && cancionesFiltradas.length === 0 ? (
+        <div className="text-center my-5">
+          <h4>
+            <i class="bi bi-emoji-frown fs-1 text-danger"></i> No se encontró
+            ninguna canción con ese nombre{" "}
+          </h4>
+        </div>
+      ) : soloSeleccionada ? (
         <Row className="mt-4 justify-content-center">
-          {cancionesFiltradas.map((cancion) => (
+          {cancionesFiltradas.map((cancion, index) => (
             <Col key={cancion.id} xs={12} md={4} lg={3} className="mb-3 ">
               <Card className="h-100  rounded-4 overflow-hidden cardHover">
                 <Card.Img
@@ -65,16 +76,12 @@ const CardCanciones = () => {
                   className="img-fluid "
                 />
                 <Card.Body className="d-flex flex-column align-items-center text-center">
-                  <Card.Title>{cancionesFiltradas[0].artista}</Card.Title>
-                  <Card.Text>{cancionesFiltradas[0].nombreCancion}</Card.Text>
-                  <Button
-                    as={Link}
-                    to="/detalles/"
-                    className="btn-login w-100"
-                  >
-                    <a href="./Detalle">
-                    Conocer más
-                    </a>
+                  <Card.Title>{cancionesFiltradas[index].artista}</Card.Title>
+                  <Card.Text>
+                    {cancionesFiltradas[index].nombreCancion}
+                  </Card.Text>
+                  <Button as={Link} to="/detalles" className="btn-login w-50">
+                    Conocé más
                   </Button>
                 </Card.Body>
               </Card>
@@ -94,7 +101,8 @@ const CardCanciones = () => {
                 <Card.Body className="d-flex flex-column align-items-center text-center">
                   <Card.Title>{cancion.artista}</Card.Title>
                   <Card.Text>{cancion.nombreCancion}</Card.Text>
-                  <Button variant="primary" className="btn-login">
+
+                  <Button as={Link} to="/detalles" className="btn-login w-50">
                     Conocé más
                   </Button>
                 </Card.Body>
