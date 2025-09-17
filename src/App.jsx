@@ -7,21 +7,21 @@ import CardCanciones from "./components/pages/CardCanciones";
 import Administrador from "./components/pages/Administrador";
 import Nosotros from "./components/pages/Nosotros";
 import Login from "./components/pages/Login";
-
-
+import NotFoundPage from "./components/shared/NotFoundPage";
 
 export default function AppLayout() {
   return (
     <>
       <BrowserRouter>
         <Menu />
-        
+
         <Routes>
           <Route path="/" element={<CardCanciones />} />
           <Route path="/admin" element={<Administrador />} />
           <Route path="/detalles/:id" element={<Detalle />} />
           <Route path="/about" element={<Nosotros />} />
           <Route path="/login" element={<Login />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>
@@ -29,7 +29,6 @@ export default function AppLayout() {
       <main style={{ padding: "2rem 0", flex: "1" }}>
         <Container></Container>
       </main>
-
     </>
   );
 }
