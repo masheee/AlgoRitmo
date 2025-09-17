@@ -34,16 +34,16 @@ const CardCanciones = () => {
         />
       </div>
       <div className="text-center my-5">
-        <h2>BUSCA TU TEMA FAVORITO!!!</h2>
+        <h2>¡BUSCA TU TEMA FAVORITO!</h2>
       </div>
 
       {/* buscador */}
       <div className="mb-5 d-flex justify-content-center">
-        <Form className="d-flex justify-content-center w-50" role="search">
+        <Form className="d-flex justify-content-center w-50 " role="search">
           <Form.Control
             type="search"
             placeholder="Elegí una canción"
-            className="me-2 w-50 "
+            className="me-2 w-50 buscarPpal"
             aria-label="Search"
             value={busqueda}
             /* cada vez que escribo en el input, se actualiza el estado, cada cambio actualiza cancionesSeleccionada */
