@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 import { Google, Facebook } from "react-bootstrap-icons"; 
-import "../../styles/LoginPage.css";
+import "../../styles/Login.css";
 
 const LoginPage = () => {
   const [show, setShow] = useState(true);

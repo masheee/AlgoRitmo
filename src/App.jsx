@@ -15,10 +15,11 @@ export default function AppLayout() {
     <>
       <BrowserRouter>
         <Menu />
+        
         <Routes>
           <Route path="/" element={<CardCanciones />} />
           <Route path="/admin" element={<Administrador />} />
-          <Route path="/detail/:id" element={<Detalle />} />
+          <Route path="/detalles/:id" element={<Detalle />} />
           <Route path="/about" element={<Nosotros />} />
           <Route path="/login" element={<Login />} />
         </Routes>
@@ -28,6 +29,7 @@ export default function AppLayout() {
       <main style={{ padding: "2rem 0", flex: "1" }}>
         <Container></Container>
       </main>
+
     </>
   );
 }

@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import canciones from "../../Data/CancionesInicio.js";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const CardCanciones = () => {
@@ -66,8 +67,14 @@ const CardCanciones = () => {
                 <Card.Body className="d-flex flex-column align-items-center text-center">
                   <Card.Title>{cancionesFiltradas[0].artista}</Card.Title>
                   <Card.Text>{cancionesFiltradas[0].nombreCancion}</Card.Text>
-                  <Button variant="primary" className="btn-login">
-                    Conocé más
+                  <Button
+                    as={Link}
+                    to="/detalles/"
+                    className="btn-login w-100"
+                  >
+                    <a href="./Detalle">
+                    Conocer más
+                    </a>
                   </Button>
                 </Card.Body>
               </Card>
