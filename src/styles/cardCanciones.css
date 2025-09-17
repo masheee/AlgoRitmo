@@ -4,4 +4,7 @@
   object-fit: cover;  
   border-radius: 0px 0px 12px 12px; 
   object-position: 50% 75%; 
+  margin-top: 0px;
+  display: block;
+  margin-top: -1rem
 }
