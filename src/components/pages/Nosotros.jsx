@@ -5,6 +5,8 @@ import MaximilianoGomezTolra from "../../img/MaximilianoGomezTolra.jpg";
 import MaximilianoGuerrero from "../../img/MaximilianoGuerrero.jpg";
 import SebastianFlomenbaun from "../../img/SebastianFlomenbaun.jpg";
 import JoseLedesma from "../../img/JoseLedesma.jpg";
+import { Link } from "react-router-dom";
+import "../../styles/nosotros.css";
 
 const Nosotros = () => {
   return (
@@ -12,9 +14,9 @@ const Nosotros = () => {
       <h2 className="text-center">¿Quiénes somos?</h2>
       <p>
         En{" "}
-        <a href="/" className="AlgoRitmo text-decoration-none fw-bold">
+        <Link to="/" className="AlgoRitmo text-decoration-none fw-bold">
           AlgoRitmo
-        </a>{" "}
+        </Link>{" "}
         creemos que la música es más que un sonido: es una experiencia que
         conecta personas, emociones y momentos. Nuestra plataforma de streaming
         fue creada para que disfrutes de tus canciones favoritas, descubras
@@ -23,9 +25,9 @@ const Nosotros = () => {
       <br />
       <p>
         Porque con{" "}
-        <a href="/" className="AlgoRitmo text-decoration-none fw-bold">
+        <Link to="/" className="AlgoRitmo text-decoration-none fw-bold">
           AlgoRitmo
-        </a>{" "}
+        </Link>{" "}
         no solo escuchás música: vivís tu propio ritmo.
       </p>
 
