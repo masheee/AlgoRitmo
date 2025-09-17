@@ -7,7 +7,6 @@ const Footer = () => {
     <footer className="footer-custom">
       <Container>
         <Row>
-          {/* Sección 1: Marca */}
           <Col md={4}>
             <h5 className="footer-brand">
               AlgoRitmo
@@ -16,7 +15,6 @@ const Footer = () => {
             <p>Tu música, en cualquier momento.</p>
           </Col>
 
-          {/* Sección 2: Navegación */}
           <Col md={4}>
             <h6>Enlaces</h6>
             <ul className="footer-links">
@@ -27,7 +25,6 @@ const Footer = () => {
             </ul>
           </Col>
 
-          {/* Sección 3: Contacto + Redes */}
           <Col md={4}>
             <h6>Contacto</h6>
             <p>Email: contacto@musicapp.com</p>

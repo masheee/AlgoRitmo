@@ -19,7 +19,6 @@
   color: var(--color-text) !important;
 }
 
-/* Botón de ingresar */
 .btn-login {
   background-color: var(--color-primary);
   border: none;
