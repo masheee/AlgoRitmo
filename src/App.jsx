@@ -18,7 +18,7 @@ export default function AppLayout() {
         <Routes>
           <Route path="/" element={<CardCanciones />} />
           <Route path="/admin" element={<Administrador />} />
-          <Route path="/detalles/:id" element={<Detalle />} />
+          <Route path="/detalles" element={<Detalle />} />
           <Route path="/about" element={<Nosotros />} />
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFoundPage />} />
