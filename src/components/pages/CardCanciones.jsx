@@ -12,7 +12,7 @@ const CardCanciones = () => {
 
   /* busca canciones con el mismo titulo */
   const cancionesFiltradas = canciones.filter((cancion) =>
-    cancion.nombreCancion.toLowerCase().includes(busqueda.toLowerCase())
+    cancion.nombreCancion.toLowerCase().startsWith(busqueda.toLowerCase())
   );
 
   /* muestra solo las canciones filtradas, osea si encontro alguna coincidencia */
