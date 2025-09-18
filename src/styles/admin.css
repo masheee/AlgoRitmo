@@ -70,3 +70,52 @@ h1 {
 .admin-table tbody tr:hover td {
   color: var(--color-primary);
 }
+
+.form-container {
+  background-color: var(--color-surface);
+  padding: 40px;
+  border-radius: 1rem;
+  max-width: 600px; /* ancho máximo */
+  margin: auto; /* centrar */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  color: var(--color-text);
+}
+
+.form-container h2 {
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.form-container .form-label {
+  color: var(--color-muted);
+  font-weight: 500;
+}
+
+.form-container .form-control {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-secondary);
+  color: var(--color-text);
+  border-radius: 10px;
+  padding: 7px 15px;
+  max-width: 400px; /* inputs más cortos */
+}
+
+.form-container .form-control:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 0.25rem rgba(232, 121, 249, 0.25);
+}
+
+.form-container button {
+  background-color: var(--color-accent);
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: var(--color-primary);
+}
