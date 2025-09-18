@@ -4,6 +4,7 @@ import { Google, Facebook } from "react-bootstrap-icons";
 import { useForm } from "react-hook-form";
 import "../../styles/Login.css";
 import { data } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const LoginPage = ({ setUsuarioLogueado }) => {
   const [show, setShow] = useState(true);
@@ -18,6 +19,19 @@ const LoginPage = ({ setUsuarioLogueado }) => {
 
   const onSubmit = (data) => {
     console.log(data);
+    if (
+      data.email === import.meta.env.VITE_API_EMAIL &&
+      data.password === import.meta.env.VITE_API_PASSWORD
+    ) {
+      setUsuarioLogueado(true)
+
+    } else {
+      Swal.fire({
+        title: "Ocurrió un error",
+        text: "Crediciones incorrectas",
+        icon: "error",
+      });
+    }
   };
 
   return (

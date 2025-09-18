@@ -9,8 +9,12 @@ import Nosotros from "./components/pages/Nosotros";
 import Login from "./components/pages/Login";
 import NotFoundPage from "./components/shared/NotFoundPage";
 import FormularioAdmin from "./components/pages/FormularioAdmin";
+import { useState } from "react";
 
 export default function AppLayout() {
+
+    const [usuarioLogueado, setUsuarioLogueado]= useState(false);
+
   return (
     <>
       <BrowserRouter>
@@ -18,12 +22,11 @@ export default function AppLayout() {
 
         <Routes>
           <Route path="/" element={<CardCanciones />} />
-          <Route path="/admin" element={<Administrador />} />
-          <Route path="/admin/formulario" element={<FormularioAdmin />} />
           <Route path="/detalles" element={<Detalle />} />
+          <Route path="/login" element={<Login setUsuarioLogueado={setUsuarioLogueado}/>} />
+          <Route path="/admin" element={<Administrador />} />
+          <Route path="/admin/formulario" element={<FormularioAdmin />} />     
           <Route path="/about" element={<Nosotros />} />
-          <Route path="/login" element={<Login />} />
-
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
