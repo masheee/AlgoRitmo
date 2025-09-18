@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useNavigate, useLocation } from "react-router-dom";
+import "../../styles/admin.css";
 
 const FormularioAdmin = () => {
   const [titulo, setTitulo] = useState("");
@@ -52,9 +53,9 @@ const FormularioAdmin = () => {
   };
 
   return (
-    <Form className="my-4 container" onSubmit={handleSubmit}>
+    <Form className="my-4 container form-container" onSubmit={handleSubmit}>
       <h2>{editar ? "Editar Canción" : "Crear Canción"}</h2>
-      <Form.Group className="mb-3">
+      <Form.Group className="mb-3 ps-5">
         <Form.Label>Título</Form.Label>
         <Form.Control
           type="text"
@@ -64,7 +65,8 @@ const FormularioAdmin = () => {
           required
         />
       </Form.Group>
-      <Form.Group className="mb-3">
+      <Form.Group className="mb-3 ps-5">
+        
         <Form.Label>Artista o Grupo</Form.Label>
         <Form.Control
           type="text"
@@ -74,7 +76,7 @@ const FormularioAdmin = () => {
           required
         />
       </Form.Group>
-      <Form.Group className="mb-3">
+      <Form.Group className="mb-3 ps-5">
         <Form.Label>Categoría</Form.Label>
         <Form.Control
           type="text"
@@ -84,7 +86,7 @@ const FormularioAdmin = () => {
           required
         />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formImagen">
+      <Form.Group className="mb-3 ps-5" controlId="formImagen">
         <Form.Label>Imagen URL*</Form.Label>
         <Form.Control
           type="text"
@@ -93,7 +95,7 @@ const FormularioAdmin = () => {
           placeholder="Ej: https://images.pexels.com/photos/33928028/pexels-photo.jpeg"
         />
       </Form.Group>
-      <Form.Group className="mb-3">
+      <Form.Group className="mb-3 ps-5">
         <Form.Label>Duración</Form.Label>
         <Form.Control
           type="text"
@@ -103,7 +105,7 @@ const FormularioAdmin = () => {
           required
         />
       </Form.Group>
-      <Button type="submit" variant="success">
+      <Button type="submit" variant="success" className="ms-5">
          {editar ? "Guardar Cambios" : "Crear Canción"}
       </Button>
     </Form>
