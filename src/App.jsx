@@ -59,9 +59,12 @@ export default function AppLayout() {
         <Footer />
       </BrowserRouter>
 
-      <main style={{ padding: "2rem 0", flex: "1" }}>
+      <main>
         <Container></Container>
       </main>
     </>
   );
 }
+
+
+//      <main style={{ padding: "2rem 0", flex: "1" }}>

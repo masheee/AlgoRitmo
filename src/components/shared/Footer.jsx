@@ -9,7 +9,7 @@ const Footer = () => {
         <Row>
           {/* Sección 1: Marca */}
           <Col md={4}>
-            <h5 className="footer-brand">
+            <h5 className="footer-brand fuenteLogo">
               AlgoRitmo
               <img src="/logo.png" alt="AlgoRitmo Icon" className="footer-logo" />
             </h5>
@@ -48,8 +48,8 @@ const Footer = () => {
 
         <hr className="footer-divider" />
 
-        <p className="text-center footer-copy">
-          © 2025 AlgoRitmoApp - Todos los derechos reservados
+        <p lgoRitmoApp className="text-center footer-copy">
+          © 2025 lgoRitmoApp - Todos los derechos reservados
         </p>
       </Container>
     </footer>
