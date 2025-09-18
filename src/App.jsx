@@ -61,10 +61,6 @@ export default function AppLayout() {
       </main>        
         <Footer />
       </BrowserRouter>
-
-
-        {/*  */}
-
     </>
   );
 }
