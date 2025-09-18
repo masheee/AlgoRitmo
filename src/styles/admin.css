@@ -1,9 +1,8 @@
-h1{
-    color: var(--color-primary);
+h1 {
+  color: var(--color-primary);
 }
 
 .admin-button {
-  
   background-color: var(--color-primary);
   text-decoration: none;
 }
@@ -13,40 +12,40 @@ h1{
   background-color: var(--color-accent);
 }
 
-.admin-button-trash{
-    background-color: var(--color-danger);
-    text-decoration: none;
-    border-style: none;
+.admin-button-trash {
+  background-color: var(--color-danger);
+  text-decoration: none;
+  border-style: none;
 }
 
 .admin-button-trash:hover {
-   background-color: rgb(119, 21, 21);
-    text-decoration: none;
+  background-color: rgb(119, 21, 21);
+  text-decoration: none;
 }
 
-.admin-button-edit{
-    background-color: var(--color-primary);
-    text-decoration: none;
-    border-style: none;
+.admin-button-edit {
+  background-color: var(--color-primary);
+  text-decoration: none;
+  border-style: none;
 }
 
 .admin-button-edit:hover {
-   background-color: rgb(93, 30, 93);
-    text-decoration: none;
+  background-color: rgb(93, 30, 93);
+  text-decoration: none;
 }
 
-.admin-control-buscar{
-    border: 1px solid var(--color-primary);
-    text-decoration: none;
+.admin-control-buscar {
+  border: 1px solid var(--color-primary);
+  text-decoration: none;
 }
 
 .admin-control-buscar:hover {
-   
-    box-shadow: var(--color-success);
+  border: 1px solid var(--color-success);
+  box-shadow: 3px 3px 20px var(--color-success);
 }
+
 .admin-control-buscar:focus {
-    
-    box-shadow:  0 0 0 0.1rem var(--color-success);
+  box-shadow: 0 0 0 0.1rem var(--color-success);
 }
 
 /* Encabezado */
@@ -69,8 +68,5 @@ h1{
 
 /* Hover */
 .admin-table tbody tr:hover td {
-  
   color: var(--color-primary);
 }
-
-

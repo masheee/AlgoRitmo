@@ -9,7 +9,7 @@ const Menu = () => {
   return (
     <Navbar expand="lg" className="navbar-custom" variant="dark" sticky="top">
       <Container>
-        <Navbar.Brand href="/" className="navbar-brand-custom">
+        <Navbar.Brand href="/" className="navbar-brand-custom fuenteLogo">
           <img src="/logo.png" alt="AlgoRitmo Icon" className="navbar-logo" />
           AlgoRitmo
         </Navbar.Brand>
