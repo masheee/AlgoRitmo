@@ -22,7 +22,7 @@ export default function AppLayout() {
   return (
     <>
       <BrowserRouter>
-        <Menu />
+        <Menu usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}/>
 
         <Routes>
           <Route path="/" element={<CardCanciones />} />
