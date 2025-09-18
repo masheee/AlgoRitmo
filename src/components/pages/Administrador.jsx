@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Form, Table } from "react-bootstrap";
+import { useNavigate } from "react-router-dom"; 
 import "../../styles/admin.css";
 const Administrador = () => {
+    const navigate = useNavigate();
+    const [canciones, setCanciones] = useState([]);
+
+      // ✅ Cargar canciones desde localStorage al iniciar
+    useEffect(() => {
+        const data = localStorage.getItem("canciones");
+        if (data) {
+        setCanciones(JSON.parse(data));
+        }
+    }, []);
+
+
     return (
         <section className='container'>
             <div className='d-flex justify-content-around mt-4'>
                 <h1>Administración de Canciones</h1>
-                <Button variant='success' className='py-0 admin-button'>Agregar Canción</Button>
+                <Button className='py-0 admin-button' onClick={() => navigate("/admin/formulario")}>Agregar Canción</Button>
             </div>
 
             <div className="mt-4">
@@ -18,7 +31,10 @@ const Administrador = () => {
                         className="me-2 admin-control-buscar"
                         aria-label="Buscar"
                     />
-                        <Button className='admin-button'>Buscar</Button>
+                        <Button className='admin-button' 
+                        >
+                            Buscar
+                        </Button>
                     </div>
                     
                 </Form>
@@ -37,7 +53,30 @@ const Administrador = () => {
                     </tr>
                 </thead>
                 <tbody className="text-center">
-                    <tr>
+                    {canciones.length > 0 ? (
+                        canciones.map((cancion, i) => (
+                        <tr key={i}>
+                            <td>{i + 1}</td>
+                            <td>{cancion.titulo}</td>
+                            <td>{cancion.artista}</td>
+                            <td>{cancion.categoria}</td>
+                            <td>{cancion.duracion}</td>
+                            <td className="text-center">
+                                <Button  className='me-2 admin-button-edit'>
+                                    <i className="bi bi-pencil-square"></i>
+                                </Button>
+                                <Button className='admin-button-trash'>
+                                <i className="bi bi-trash"></i>
+                                </Button>
+                            </td>
+                        </tr>
+                        ))
+                    ) : (
+                        <tr>
+                        <td colSpan="6">No hay canciones cargadas</td>
+                        </tr>
+                    )}
+                    {/* <tr>
                         <td>001</td>
                         <td>Bohemian Rhapsody</td>
                         <td>Queen</td>
@@ -82,7 +121,7 @@ const Administrador = () => {
                             <i className="bi bi-trash"></i>
                             </Button>
                         </td>
-                    </tr>
+                    </tr> */}
                 </tbody>
             </Table>
         </section>
