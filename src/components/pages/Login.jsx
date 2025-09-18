@@ -3,7 +3,7 @@ import { Modal, Button, Form } from "react-bootstrap";
 import { Google, Facebook } from "react-bootstrap-icons";
 import { useForm } from "react-hook-form";
 import "../../styles/Login.css";
-import { data } from "react-router-dom";
+import { data, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const LoginPage = ({ setUsuarioLogueado }) => {
@@ -17,18 +17,25 @@ const LoginPage = ({ setUsuarioLogueado }) => {
     formState: { errors },
   } = useForm();
 
+  const navegacion = useNavigate()
+
   const onSubmit = (data) => {
     console.log(data);
     if (
       data.email === import.meta.env.VITE_API_EMAIL &&
       data.password === import.meta.env.VITE_API_PASSWORD
     ) {
-      setUsuarioLogueado(true)
-
+      setUsuarioLogueado(true);
+      Swal.fire({
+        title: "Bienvenido a la administración de AlgoRitmo",
+        text: "Iniciaste sesión correctamente",
+        icon: "success",
+      });
+      navegacion ("/admin")
     } else {
       Swal.fire({
         title: "Ocurrió un error",
-        text: "Crediciones incorrectas",
+        text: "Credenciales incorrectas",
         icon: "error",
       });
     }
