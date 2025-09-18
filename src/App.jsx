@@ -10,9 +10,11 @@ import Login from "./components/pages/Login";
 import NotFoundPage from "./components/shared/NotFoundPage";
 import FormularioAdmin from "./components/pages/FormularioAdmin";
 import { useEffect, useState } from "react";
+import ProtectorAdmin from "./components/routes/ProtectorAdmin";
 
 export default function AppLayout() {
-  const sesionUsuario = JSON.parse(sessionStorage.getItem('usuarioKey')) || false;
+  const sesionUsuario =
+    JSON.parse(sessionStorage.getItem("usuarioKey")) || false;
   const [usuarioLogueado, setUsuarioLogueado] = useState(sesionUsuario);
 
   useEffect(() => {
@@ -22,7 +24,10 @@ export default function AppLayout() {
   return (
     <>
       <BrowserRouter>
-        <Menu usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}/>
+        <Menu
+          usuarioLogueado={usuarioLogueado}
+          setUsuarioLogueado={setUsuarioLogueado}
+        />
 
         <Routes>
           <Route path="/" element={<CardCanciones />} />
@@ -31,8 +36,23 @@ export default function AppLayout() {
             path="/login"
             element={<Login setUsuarioLogueado={setUsuarioLogueado} />}
           />
-          <Route path="/admin" element={<Administrador />} />
-          <Route path="/admin/formulario" element={<FormularioAdmin />} />
+          <Route ute
+            path="/admin"
+            element={
+              <ProtectorAdmin
+                usuarioLogueado={usuarioLogueado}
+              ></ProtectorAdmin>
+            }
+          >
+            <Route 
+            index 
+            element={<Administrador />}
+            />
+            <Route 
+              path="formulario" 
+              element={<FormularioAdmin />} />
+          </Route>
+
           <Route path="/about" element={<Nosotros />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
