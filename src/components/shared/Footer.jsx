@@ -30,7 +30,7 @@ const Footer = () => {
           {/* Sección 3: Contacto + Redes */}
           <Col md={4}>
             <h6>Contacto</h6>
-            <p>Email: contacto@musicapp.com</p>
+            <p>Email: contacto@algoritmo.com</p>
 
             <div className="footer-socials">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer">

@@ -45,3 +45,22 @@
       transition: 600ms;
 
 }
+
+.btn-gradient {
+  background: linear-gradient(45deg, var(--color-success), #e879f9, #a78bfa);
+  color: #1e1b29;
+  border: 2px solid #a78bfa;
+  font-weight: bold;
+  padding: 0.6rem 1.4rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(deg, #8b5cf6, #e879f9, #34d399);
+  color: #f3f4f6;
+  border: 2px solid #a78bfa;
+  box-shadow: 0 4px 15px #a78bfa;
+  transform: scale(1.05);
+}

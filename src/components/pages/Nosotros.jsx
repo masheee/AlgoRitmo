@@ -1,4 +1,4 @@
-import { Container, Card, Row, Col } from "react-bootstrap";
+import { Container, Card, Row, Col, Button } from "react-bootstrap";
 import PaulaCabana from "../../img/PaulaCabana.jpg";
 import MarianoJuarez from "../../img/MarianoJuarez.jpg";
 import MaximilianoGomezTolra from "../../img/MaximilianoGomezTolra.jpg";
@@ -239,6 +239,7 @@ const Nosotros = () => {
           </Col>
         </Row>
       </Container>
+      <Button className="d-flex justify-content-center btn-gradient">Volver al Inicio</Button>
     </section>
   );
 };

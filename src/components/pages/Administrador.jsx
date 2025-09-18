@@ -81,10 +81,16 @@ const Administrador = () => {
                 <td>{cancion.categoria}</td>
                 <td>{cancion.duracion}</td>
                 <td className="text-center">
-                  <Button className="me-2 admin-button-edit" onClick={() => handleEdit(cancion, i)}>
+                  <Button
+                    className="me-2 admin-button-edit"
+                    onClick={() => handleEdit(cancion, i)}
+                  >
                     <i className="bi bi-pencil-square"></i>
                   </Button>
-                  <Button className="admin-button-trash" onClick={() => handleDelete(i)}>
+                  <Button
+                    className="admin-button-trash"
+                    onClick={() => handleDelete(i)}
+                  >
                     <i className="bi bi-trash"></i>
                   </Button>
                 </td>
@@ -95,7 +101,6 @@ const Administrador = () => {
               <td colSpan="6">No hay canciones cargadas</td>
             </tr>
           )}
-          
         </tbody>
       </Table>
     </section>
