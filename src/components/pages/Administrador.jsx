@@ -95,52 +95,7 @@ const Administrador = () => {
               <td colSpan="6">No hay canciones cargadas</td>
             </tr>
           )}
-          {/* <tr>
-                        <td>001</td>
-                        <td>Bohemian Rhapsody</td>
-                        <td>Queen</td>
-                        <td>Rock</td>
-                        <td>5:55</td>
-                        <td className="text-center">
-                            <Button  className='me-2 admin-button-edit'>
-                                <i className="bi bi-pencil-square"></i>
-                            </Button>
-                            <Button className='admin-button-trash'>
-                            <i className="bi bi-trash"></i>
-                            </Button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>002</td>
-                        <td>Shape of You</td>
-                        <td>Ed Sheeran</td>
-                        <td>Pop</td>
-                        <td>4:23</td>
-                        <td className="text-center">
-                            <Button variant='success' className='me-2 admin-button-edit'>
-                                <i className="bi bi-pencil-square "></i>
-                            </Button>
-                            <Button className='admin-button-trash'>
-                            <i className="bi bi-trash"></i>
-                            </Button>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td>003</td>
-                        <td>Blinding Lights</td>
-                        <td>The Weeknd</td>
-                        <td>Synth-pop</td>
-                        <td>3:20</td>
-                        <td className="text-center">
-                            <Button variant='success' className='me-2 admin-button-edit'>
-                                <i className="bi bi-pencil-square"></i>
-                            </Button>
-                            <Button className='admin-button-trash'>
-                            <i className="bi bi-trash"></i>
-                            </Button>
-                        </td>
-                    </tr> */}
+          
         </tbody>
       </Table>
     </section>
