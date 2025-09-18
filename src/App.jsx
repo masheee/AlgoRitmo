@@ -28,7 +28,7 @@ export default function AppLayout() {
           usuarioLogueado={usuarioLogueado}
           setUsuarioLogueado={setUsuarioLogueado}
         />
-
+      <main>
         <Routes>
           <Route path="/" element={<CardCanciones />} />
           <Route path="/detalles" element={<Detalle />} />
@@ -56,12 +56,13 @@ export default function AppLayout() {
           <Route path="/about" element={<Nosotros />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
+      </main>        
         <Footer />
       </BrowserRouter>
 
-      <main>
-        <Container></Container>
-      </main>
+
+        {/*  */}<Container></Container>
+
     </>
   );
 }
