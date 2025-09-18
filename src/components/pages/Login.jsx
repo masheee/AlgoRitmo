@@ -2,27 +2,27 @@ import { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 import { Google, Facebook } from "react-bootstrap-icons";
 import { useForm } from "react-hook-form";
-import Swal from "sweetalert2";
 import "../../styles/Login.css";
+import { data } from "react-router-dom";
 
-const LoginPage = (setUsuarioLogueado) => {
+const LoginPage = ({setUsuarioLogueado}) => {
   const [show, setShow] = useState(true);
 
   const handleClose = () => setShow(false);
+
+  // -------------Cod Tali-------------------//
 
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+  
 
-  // Si el formulario es valido
-  const onSubmit = (data) => {
-    if (setUsuarioLogueado) {
-      setUsuarioLogueado(true); // ejemplo: marcar usuario logueado
-    }
-    handleClose();
-  };
+const onSubmit = (data) => {
+  console.log(data);
+}
+
 
   return (
     <Modal show={show} onHide={handleClose} centered className="login-modal">
@@ -30,7 +30,7 @@ const LoginPage = (setUsuarioLogueado) => {
         <Modal.Title>Iniciar Sesión</Modal.Title>
       </Modal.Header>
       <Modal.Body className="login-body">
-        <Form>
+        <Form onSubmit={handleSubmit(onSubmit)}>
           {/* Email */}
           <Form.Group className="mb-3" controlId="formEmail">
             <Form.Label>Correo electrónico</Form.Label>
@@ -41,43 +41,36 @@ const LoginPage = (setUsuarioLogueado) => {
               {...register("email", {
                 required: "El correo es un dato obligatorio",
                 pattern: {
-                  value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                  message: "Ustede debe ingresar un correo con formato válido",
+                  value: /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/,
+                  message: "Usted debe ingresar un correo con formato válido, ej: usuario@mail.com",
                 },
               })}
             />
-            {errors?.email && (
               <Form.Text className="text-danger">
-                {errors.email.message}
+                {errors.email?.message}
               </Form.Text>
-            )}
-          </Form.Group>
+            </Form.Group>
+
           {/* Contraseña */}
           <Form.Group className="mb-3" controlId="formPassword">
             <Form.Label>Contraseña</Form.Label>
             <Form.Control
+            className="login-input"
               type="password"
               placeholder="********"
-              className="login-input"
-              {...register("password", {
-                required: "La contraseña es obligatoria",
-                minLength: {
-                  value: 8,
-                  message: "La contraseña debe tener al menos 8 caracteres",
-                },
+              {...register("password",{
+                required:"La contraseña es obligatoria",
+                pattern:{
+                  value: /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/,
+                  message:"La contraseña debe tener entre 8  y 16 caracteres, al menos un dígito, al meno una minúsucla y una mayúscula y al menos un caracter especial.",
+                }
               })}
-              isInvalid={!!errors.password}
-            />
-            {errors.password && (
+            />          
               <Form.Text className="text-danger">
-                {errors.password.message}
+                {errors.password?.message}
               </Form.Text>
-            )}
-            {errors?.password && (
-              <Form.Text className="text-danger">
-                {errors.password.message}
-              </Form.Text>
-            )}
+            
+
           </Form.Group>
 
           <Button type="submit" className="btn-login w-100">
