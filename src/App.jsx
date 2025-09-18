@@ -9,11 +9,15 @@ import Nosotros from "./components/pages/Nosotros";
 import Login from "./components/pages/Login";
 import NotFoundPage from "./components/shared/NotFoundPage";
 import FormularioAdmin from "./components/pages/FormularioAdmin";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function AppLayout() {
+  const sesionUsuario = JSON.parse(sessionStorage.getItem("usuarioKey")) || false;
+  const [usuarioLogueado, setUsuarioLogueado] = useState(sesionUsuario);
 
-    const [usuarioLogueado, setUsuarioLogueado]= useState(false);
+  useEffect(() => {
+    sessionStorage.setItem("usuarioKey", JSON.stringify(usuarioLogueado));
+  }, [usuarioLogueado]);
 
   return (
     <>
@@ -23,9 +27,12 @@ export default function AppLayout() {
         <Routes>
           <Route path="/" element={<CardCanciones />} />
           <Route path="/detalles" element={<Detalle />} />
-          <Route path="/login" element={<Login setUsuarioLogueado={setUsuarioLogueado}/>} />
+          <Route
+            path="/login"
+            element={<Login setUsuarioLogueado={setUsuarioLogueado} />}
+          />
           <Route path="/admin" element={<Administrador />} />
-          <Route path="/admin/formulario" element={<FormularioAdmin />} />     
+          <Route path="/admin/formulario" element={<FormularioAdmin />} />
           <Route path="/about" element={<Nosotros />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
