@@ -5,24 +5,20 @@ import { useForm } from "react-hook-form";
 import "../../styles/Login.css";
 import { data } from "react-router-dom";
 
-const LoginPage = ({setUsuarioLogueado}) => {
+const LoginPage = ({ setUsuarioLogueado }) => {
   const [show, setShow] = useState(true);
 
   const handleClose = () => setShow(false);
-
-  // -------------Cod Tali-------------------//
 
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  
 
-const onSubmit = (data) => {
-  console.log(data);
-}
-
+  const onSubmit = (data) => {
+    console.log(data);
+  };
 
   return (
     <Modal show={show} onHide={handleClose} centered className="login-modal">
@@ -41,36 +37,38 @@ const onSubmit = (data) => {
               {...register("email", {
                 required: "El correo es un dato obligatorio",
                 pattern: {
-                  value: /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/,
-                  message: "Usted debe ingresar un correo con formato válido, ej: usuario@mail.com",
+                  value:
+                    /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/,
+                  message:
+                    "Usted debe ingresar un correo con formato válido, ej: usuario@mail.com",
                 },
               })}
             />
-              <Form.Text className="text-danger">
-                {errors.email?.message}
-              </Form.Text>
-            </Form.Group>
+            <Form.Text className="text-danger">
+              {errors.email?.message}
+            </Form.Text>
+          </Form.Group>
 
           {/* Contraseña */}
           <Form.Group className="mb-3" controlId="formPassword">
             <Form.Label>Contraseña</Form.Label>
             <Form.Control
-            className="login-input"
+              className="login-input"
               type="password"
               placeholder="********"
-              {...register("password",{
-                required:"La contraseña es obligatoria",
-                pattern:{
-                  value: /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/,
-                  message:"La contraseña debe tener entre 8  y 16 caracteres, al menos un dígito, al meno una minúsucla y una mayúscula y al menos un caracter especial.",
-                }
+              {...register("password", {
+                required: "La contraseña es obligatoria",
+                pattern: {
+                  value:
+                    /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/,
+                  message:
+                    "La contraseña debe tener entre 8  y 16 caracteres, al menos un dígito, al meno una minúsucla y una mayúscula y al menos un caracter especial.",
+                },
               })}
-            />          
-              <Form.Text className="text-danger">
-                {errors.password?.message}
-              </Form.Text>
-            
-
+            />
+            <Form.Text className="text-danger">
+              {errors.password?.message}
+            </Form.Text>
           </Form.Group>
 
           <Button type="submit" className="btn-login w-100">
