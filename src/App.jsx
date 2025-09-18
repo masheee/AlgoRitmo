@@ -12,7 +12,7 @@ import FormularioAdmin from "./components/pages/FormularioAdmin";
 import { useEffect, useState } from "react";
 
 export default function AppLayout() {
-  const sesionUsuario = JSON.parse(sessionStorage.getItem("usuarioKey")) || false;
+  const sesionUsuario = JSON.parse(sessionStorage.getItem('usuarioKey')) || false;
   const [usuarioLogueado, setUsuarioLogueado] = useState(sesionUsuario);
 
   useEffect(() => {
