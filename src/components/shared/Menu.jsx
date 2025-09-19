@@ -1,15 +1,19 @@
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
+import { Nav, Navbar, Container, Button } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
 import "../../styles/menu.css";
 
-const Menu = () => {
+const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
+const navegacion = useNavigate()
+
+const logout = () => {
+  setUsuarioLogueado(false);
+  navegacion("/login")
+}
+
   return (
     <Navbar expand="lg" className="navbar-custom" variant="dark" sticky="top">
       <Container>
-        <Navbar.Brand href="/" className="navbar-brand-custom">
+        <Navbar.Brand href="/" className="navbar-brand-custom fuenteLogo">
           <img src="/logo.png" alt="AlgoRitmo Icon" className="navbar-logo" />
           AlgoRitmo
         </Navbar.Brand>
@@ -23,14 +27,20 @@ const Menu = () => {
             </Nav.Link>
             <Nav.Link as={Link} to="/about" className="nav-link-custom">
               Nosotros
-            </Nav.Link>
-            <Nav.Link as={Link} to="/admin" className="nav-link-custom">
-              Administrador
-            </Nav.Link>
+            </Nav.Link>            
+            {usuarioLogueado ? (
+              <>
+                <Nav.Link as={Link} to="/admin" className="nav-link-custom">
+                  Administrador
+                </Nav.Link>
+                <Button onClick={logout}>Cerrar Sesión</Button>
+              </>
+            ) : (
+              <Button href="/login" className="btn-login ms-lg-3 mt-3 mt-lg-0">
+                Ingresar
+              </Button>
+            )}
 
-            <Button href="/login" className="btn-login ms-lg-3 mt-3 mt-lg-0">
-              Ingresar
-            </Button>
           </Nav>
         </Navbar.Collapse>
       </Container>

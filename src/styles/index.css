@@ -10,6 +10,12 @@
   --color-danger: #f43f5e; /* Rojo error */
 }
 
+* {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /*----------ESTO ES PARA BAJAR EL FOOTEER------------*/
 #root {
   min-height: 100vh;
@@ -19,11 +25,8 @@
 
 main {
   flex-grow: 1;
-  background-color: var(--color-bg);
 }
 /*----------------------------------------------------*/
-
-
 
 /* para hover de las cards */
 
@@ -31,7 +34,7 @@ main {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   background-color: transparent;
- transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .cardHover:hover {
@@ -39,5 +42,4 @@ main {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   z-index: 2;
   background-color: rgba(0, 123, 255, 0.1);
-
 }

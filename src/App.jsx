@@ -8,27 +8,62 @@ import Administrador from "./components/pages/Administrador";
 import Nosotros from "./components/pages/Nosotros";
 import Login from "./components/pages/Login";
 import NotFoundPage from "./components/shared/NotFoundPage";
+import FormularioAdmin from "./components/pages/FormularioAdmin";
+import { useEffect, useState } from "react";
+import ProtectorAdmin from "./components/routes/ProtectorAdmin";
 
 export default function AppLayout() {
+  const sesionUsuario =
+    JSON.parse(sessionStorage.getItem("usuarioKey")) || false;
+  const [usuarioLogueado, setUsuarioLogueado] = useState(sesionUsuario);
+
+  useEffect(() => {
+    sessionStorage.setItem("usuarioKey", JSON.stringify(usuarioLogueado));
+  }, [usuarioLogueado]);
+
   return (
     <>
       <BrowserRouter>
-        <Menu />
-
+        <Menu
+          usuarioLogueado={usuarioLogueado}
+          setUsuarioLogueado={setUsuarioLogueado}
+        />
+      <main>
+        <Container>
         <Routes>
           <Route path="/" element={<CardCanciones />} />
-          <Route path="/admin" element={<Administrador />} />
-          <Route path="/detalles/:id" element={<Detalle />} />
+          <Route path="/detalles" element={<Detalle />} />
+          <Route
+            path="/login"
+            element={<Login setUsuarioLogueado={setUsuarioLogueado} />}
+          />
+          <Route ute
+            path="/admin"
+            element={
+              <ProtectorAdmin
+                usuarioLogueado={usuarioLogueado}
+              ></ProtectorAdmin>
+            }
+          >
+            <Route 
+            index 
+            element={<Administrador />}
+            />
+            <Route 
+              path="formulario" 
+              element={<FormularioAdmin />} />
+          </Route>
+
           <Route path="/about" element={<Nosotros />} />
-          <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
+        </Container>
+      </main>        
         <Footer />
       </BrowserRouter>
-
-      <main style={{ padding: "2rem 0", flex: "1" }}>
-        <Container></Container>
-      </main>
     </>
   );
 }
+
+
+//      <main style={{ padding: "2rem 0", flex: "1" }}>
