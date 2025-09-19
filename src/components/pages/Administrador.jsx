@@ -6,7 +6,29 @@ import "../../styles/admin.css";
 const Administrador = () => {
   const navigate = useNavigate();
   const [canciones, setCanciones] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredSongs, setFilteredSongs] = useState([]);
 
+  const handleChange = (e) => {
+    setSearchTerm(e.target.value);
+};
+
+useEffect(() => {
+    if (searchTerm) {
+        const filtered = canciones.filter(
+            (cancion) =>
+                cancion.titulo
+                    .toLowerCase()
+                    .includes(searchTerm.toLowerCase()) ||
+                cancion.artista
+                    .toLowerCase()
+                    .includes(searchTerm.toLowerCase())
+        );
+        setFilteredSongs(filtered);
+    } else {
+        setFilteredSongs(canciones);
+    }
+}, [searchTerm, canciones]);
   // ✅ Cargar canciones desde localStorage al iniciar
   useEffect(() => {
     const data = localStorage.getItem("canciones");
@@ -42,16 +64,18 @@ const Administrador = () => {
 
       <div className="mt-4">
         <Form className="row g-2">
-          <div className="col-12 col-lg-6 col-md-8  d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Buscar canción..."
-              className="me-2 admin-control-buscar"
-              aria-label="Buscar"
-            />
-            <Button className="admin-button">Buscar</Button>
-          </div>
-        </Form>
+    <div className="col-12 col-lg-6 col-md-8 d-flex">
+        <Form.Control
+            type="search"
+            placeholder="Buscar canción..."
+            className="me-2 admin-control-buscar"
+            aria-label="Buscar"
+            onChange={handleChange}
+            value={searchTerm}
+        />
+        {/* <Button className="admin-button">Buscar</Button> */}
+    </div>
+</Form>
       </div>
 
       <Table
@@ -72,9 +96,9 @@ const Administrador = () => {
           </tr>
         </thead>
         <tbody className="text-center">
-          {canciones.length > 0 ? (
-            canciones.map((cancion, i) => (
-              <tr key={i}>
+    {filteredSongs.length > 0 ? (
+        filteredSongs.map((cancion, i) => (
+            <tr key={i}>
                 <td>{i + 1}</td>
                 <td>{cancion.titulo}</td>
                 <td>{cancion.artista}</td>
@@ -94,14 +118,14 @@ const Administrador = () => {
                     <i className="bi bi-trash"></i>
                   </Button>
                 </td>
-              </tr>
-            ))
-          ) : (
-            <tr>
-              <td colSpan="6">No hay canciones cargadas</td>
             </tr>
-          )}
-        </tbody>
+        ))
+    ) : (
+        <tr>
+            <td colSpan="6">No hay canciones que coincidan con la búsqueda.</td>
+        </tr>
+    )}
+</tbody>
       </Table>
     </section>
   );
