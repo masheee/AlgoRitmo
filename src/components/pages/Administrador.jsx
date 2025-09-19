@@ -15,12 +15,17 @@ const Administrador = () => {
 
 useEffect(() => {
     if (searchTerm) {
+        const searchCode = parseInt(searchTerm);
         const filtered = canciones.filter(
-            (cancion) =>
+            (cancion, i) =>
                 cancion.titulo
                     .toLowerCase()
                     .includes(searchTerm.toLowerCase()) ||
                 cancion.artista
+                    .toLowerCase()
+                    .includes(searchTerm.toLowerCase()) ||
+                (!isNaN(searchCode) && i + 1 === searchCode) ||
+                cancion.categoria
                     .toLowerCase()
                     .includes(searchTerm.toLowerCase())
         );
