@@ -3,6 +3,7 @@ import { Button, Form, Table } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "../../styles/admin.css";
 
+
 const Administrador = () => {
   const navigate = useNavigate();
   const [canciones, setCanciones] = useState([]);
