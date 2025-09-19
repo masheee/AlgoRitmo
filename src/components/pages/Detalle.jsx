@@ -21,21 +21,21 @@ const Detalle = () => {
           {/* Información de la canción */}
           <Col md={8}>
             <Card.Body>
-              <Card.Title className="fs-4 mb-4 texto-detalle">Microdancing</Card.Title>
-              <Card.Subtitle className="mb-4 text-muted texto">Mucho</Card.Subtitle>
-              <Card.Subtitle className="mb-4 text-muted texto">
+              <Card.Title className="fs-1 mb-4 texto-detalle">Microdancing</Card.Title>
+              <Card.Subtitle className="fs-4 mb-4 text-muted texto">Mucho</Card.Subtitle>
+              <Card.Subtitle className="fs-4 mb-4 text-muted texto">
                 Babasonicos
               </Card.Subtitle>
 
-              <hr />
+              <hr/>
 
-              <p>
+              <p className="fs-5">
                 <strong>Duración:</strong> 4:22
               </p>
-              <p>
+              <p className="fs-5">
                 <strong>Género:</strong> Rock
               </p>
-              <p>
+              <p className="fs-5">
                 <strong>Año:</strong> 2014
               </p>
             </Card.Body>
