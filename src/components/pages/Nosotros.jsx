@@ -13,22 +13,19 @@ const Nosotros = () => {
     <section className="container">
       <h2 className="text-center">¿Quiénes somos?</h2>
       <p>
-        En{" "}
-        <Link to="/" className="AlgoRitmo text-decoration-none fw-bold">
-          AlgoRitmo
+        Somos un equipo de desarrolladores apasionados por la tecnología, la creatividad y como vos, también por la música. Creemos que las melodías son un lenguaje universal capaz de unir personas y emociones, y quisimos trasladar esa idea al mundo digital.
+      </p>
+      <p>
+        Así nació{" "}
+        <Link to="/" className="AlgoRitmo fuenteLogo text-decoration-none fw-bold">
+          AlgoRitmo:
         </Link>{" "}
-        creemos que la música es más que un sonido: es una experiencia que
-        conecta personas, emociones y momentos. Nuestra plataforma de streaming
-        fue creada para que disfrutes de tus canciones favoritas, descubras
-        nuevos artistas y armes listas que acompañen tu día a día.
+        una plataforma de streaming pensada para que cada usuario viva la música a su manera. Desde escuchar tus canciones favoritas hasta descubrir
+        nuevos artistas y armar listas que acompañen tu día, nuestro objetivo es que disfrutes de una experiencia única, sencilla y cercana.
       </p>
       <br />
       <p>
-        Porque con{" "}
-        <Link to="/" className="AlgoRitmo text-decoration-none fw-bold">
-          AlgoRitmo
-        </Link>{" "}
-        no solo escuchás música: vivís tu propio ritmo.
+        No solo construimos una App: construimos un espacio donde la música y la tecnología se encuentran para acompañarte a vivir a tu propio ritmo.
       </p>
 
       <Container className="mb-5">
@@ -239,7 +236,9 @@ const Nosotros = () => {
           </Col>
         </Row>
       </Container>
-      <Button className="d-flex justify-content-center btn-gradient">Volver al Inicio</Button>
+      <Button className="d-flex justify-content-center btn-gradient">
+        Volver al Inicio
+      </Button>
     </section>
   );
 };

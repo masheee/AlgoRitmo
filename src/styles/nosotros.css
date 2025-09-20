@@ -47,7 +47,7 @@
 }
 
 .btn-gradient {
-  background: linear-gradient(45deg, var(--color-success), #e879f9, #a78bfa);
+  background: linear-gradient(45deg, var(--color-success), var(--color-accent), var(--color-secondary);
   color: #1e1b29;
   border: 2px solid #a78bfa;
   font-weight: bold;
@@ -63,4 +63,12 @@
   border: 2px solid #a78bfa;
   box-shadow: 0 4px 15px #a78bfa;
   transform: scale(1.05);
+}
+
+.fuenteLogo {
+  font-family: "Sometype Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  
 }
