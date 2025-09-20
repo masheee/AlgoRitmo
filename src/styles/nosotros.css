@@ -64,3 +64,11 @@
   box-shadow: 0 4px 15px #a78bfa;
   transform: scale(1.05);
 }
+
+.fuenteLogo {
+  font-family: "Sometype Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  
+}
