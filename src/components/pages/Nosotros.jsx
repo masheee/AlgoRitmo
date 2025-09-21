@@ -80,7 +80,7 @@ const Nosotros = () => {
                   Paula Cabana
                 </Card.Title>
                 <Row>
-                  <Col xs={6} className="text-center mb-3">
+                  <Col xs={6} className="text-center">
                     <a
                       href="https://github.com/TaliCabana"
                       target="_blank"
@@ -209,12 +209,12 @@ const Nosotros = () => {
               />
               <Card.Body>
                 <Card.Title className="fuenteCardNosotros">
-                  José Ingnacio Ledesma Padilla
+                  Ingnacio Ledesma Padilla
                 </Card.Title>
                 <Row>
                   <Col xs={6} className="text-center">
                     <a
-                      href="https://github.com/TaliCabana"
+                      href="https://github.com/ledesmapadilla"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -223,7 +223,7 @@ const Nosotros = () => {
                   </Col>
                   <Col xs={6} className="text-center">
                     <a
-                      href="https://www.linkedin.com/in/paula-cabana-ingenieraindustrial/"
+                      href="*"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

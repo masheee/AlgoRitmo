@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .imgCardNosotros {
@@ -43,6 +44,7 @@
   font-size: x-large;
   color: var(--color-success);
   transition: 600ms;
+  overflow: hidden;
 }
 
 .btn-gradient {
