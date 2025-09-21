@@ -61,7 +61,7 @@ main {
   border-radius: 10px;
   transition: all 0.3s ease;
   cursor: pointer;
-} 
+}
 
 .btn-gradient:hover {
   background: radial-gradient(
@@ -79,4 +79,8 @@ main {
   border-color: var(--color-success) !important;
 }
 
+.btn-cerrarSesion:hover {
+  background-color: #8a5cf61b;
+  transition: all 0.3s ease;
+}
 /*----------------------------------------------------*/
