@@ -61,6 +61,7 @@ const CardCanciones = () => {
           </Button>
         </Form>
       </div>
+      
       {/* grilla */}
       {busqueda.trim() !== "" && cancionesFiltradas.length === 0 ? (
         <div className="text-center my-5">
@@ -85,12 +86,16 @@ const CardCanciones = () => {
                       <i className="bi bi-play-circle  text-gray icon-overlay "></i>
                     </Link>
                   </div>
-                  <Card.Body className="d-flex flex-column align-items-center text-center">
+                  <Card.Body className="d-flex flex-column align-items-center text-center ">
                     <Card.Title>{cancion.artista}</Card.Title>
                     <Card.Text>
                       {cancion.nombreCancion || cancion.titulo}
                     </Card.Text>
-                    <Button as={Link} to="/detalles" className="btn-login w-50">
+                    <Button
+                      as={Link}
+                      to={`/detalles/${cancion.id}`}
+                      className="btn-login w-50"
+                    >
                       Conocé más
                     </Button>
                   </Card.Body>

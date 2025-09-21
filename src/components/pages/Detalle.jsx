@@ -1,7 +1,27 @@
 import { Card, Row, Col } from "react-bootstrap";
 import "../../styles/detalle.css";
+import { useEffect, useState } from "react";
+import canciones from "../../Data/CancionesInicio";
+import { useParams, useNavigate } from "react-router-dom";
 
 const Detalle = () => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const [cancion, setCancion] = useState(null);
+
+  useEffect(() => {
+    const cancionesGuardadas =
+      JSON.parse(localStorage.getItem("canciones")) || [];
+    const todas = [...canciones, ...cancionesGuardadas];
+
+    const encontrada = todas.find((item) => String(item.id) === id);
+    setCancion(encontrada);
+  }, [id]);
+
+  if (!cancion) {
+    return <h2 className="text-center mt-5">Canción no encontrada</h2>;
+  }
+
   return (
     <>
       <Card className="my-3 p-3 shadow-sm fondo-detalle">
@@ -12,8 +32,8 @@ const Detalle = () => {
             className="d-flex align-items-center justify-content-center"
           >
             <Card.Img
-              src="https://cdn-images.dzcdn.net/images/cover/7b7321890dcb7f7f7298ae48d67f2d50/1900x1900-000000-80-0-0.jpg"
-              alt="Imagen de la canción"
+              src={cancion.imagen}
+              alt="Portada de cancion"
               className="img-fluid rounded"
             />
           </Col>
@@ -21,28 +41,35 @@ const Detalle = () => {
           {/* Información de la canción */}
           <Col md={8}>
             <Card.Body>
-              <Card.Title className="fs-4 mb-4 texto-detalle">Microdancing</Card.Title>
-              <Card.Subtitle className="mb-4 text-muted texto">Mucho</Card.Subtitle>
+              <Card.Title className="fs-3 mb-4 texto-detalle ">
+                {cancion.nombreCancion || cancion.titulo}
+              </Card.Title>
               <Card.Subtitle className="mb-4 text-muted texto">
-                Babasonicos
+                {cancion.nombreCancion || cancion.titulo}
+              </Card.Subtitle>
+              <Card.Subtitle className="mb-4 text-muted texto">
+                {cancion.artista}
               </Card.Subtitle>
 
               <hr />
 
               <p>
-                <strong>Duración:</strong> 4:22
+                <strong>Duración:</strong>{" "}
+                {cancion.duracionCancion || cancion.duracion}
               </p>
               <p>
-                <strong>Género:</strong> Rock
+                <strong>Género:</strong> {cancion.categoria}
               </p>
               <p>
-                <strong>Año:</strong> 2014
+                <strong>Año:</strong> {cancion.anio}
               </p>
             </Card.Body>
           </Col>
         </Row>
       </Card>
-      <button className="btn boton-detalle"><i className="bi bi-arrow-bar-left"> Volver al inicio </i></button>
+      <button className="btn boton-detalle" onClick={() => navigate("/")}>
+        <i className="bi bi-arrow-bar-left"> Volver al inicio </i>
+      </button>
     </>
   );
 };
