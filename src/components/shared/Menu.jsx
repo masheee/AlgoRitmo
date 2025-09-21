@@ -1,5 +1,5 @@
 import { Nav, Navbar, Container, Button } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "../../styles/menu.css";
 
 const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
@@ -22,21 +22,21 @@ const logout = () => {
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto align-items-lg-center">
-            <Nav.Link as={Link} to="/" className="nav-link-custom">
+            <NavLink to="/" className="nav-link-custom nav-link">
               Inicio
-            </Nav.Link>
-            <Nav.Link as={Link} to="/about" className="nav-link-custom">
+            </NavLink>
+            <NavLink to="/about" className="nav-link-custom nav-link">
               Nosotros
-            </Nav.Link>            
+            </NavLink>            
             {usuarioLogueado ? (
               <>
-                <Nav.Link as={Link} to="/admin" className="nav-link-custom">
+                <NavLink to="/admin" className="nav-link-custom nav-link">
                   Administrador
-                </Nav.Link>
-                <Button onClick={logout}>Cerrar Sesión</Button>
+                </NavLink>
+                <Button className="navbar-custom btn-sesion" onClick={logout}>Cerrar Sesión</Button>
               </>
             ) : (
-              <Button href="/login" className="btn-login ms-lg-3 mt-3 mt-lg-0">
+              <Button href="/login" className="ms-lg-3 mt-3 mt-lg-0 btn-sesion">
                 Ingresar
               </Button>
             )}

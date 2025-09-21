@@ -61,7 +61,7 @@ useEffect(() => {
       <div className="d-flex justify-content-around mt-4">
         <h1>Administración de Canciones</h1>
         <Button
-          className="py-0 admin-button"
+          className="py-0 admin-button btn-gradient"
           onClick={() => navigate("/admin/formulario")}
         >
           Agregar Canción

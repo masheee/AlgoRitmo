@@ -48,7 +48,7 @@ const Footer = () => {
 
         <hr className="footer-divider" />
 
-       {/*  <p lgoRitmoApp className="text-center footer-copy">
+       {/* <p  className="text-center footer-copy">
           &copy; 2025 <span className="fuenteLogo">AlgoRitmo</span> App - Todos los derechos reservados
         </p> */}
       </Container>

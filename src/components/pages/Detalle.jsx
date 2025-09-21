@@ -67,7 +67,7 @@ const Detalle = () => {
           </Col>
         </Row>
       </Card>
-      <button className="btn boton-detalle" onClick={() => navigate("/")}>
+      <button className="btn boton-detalle btn-gradient" onClick={() => navigate("/")}>
         <i className="bi bi-arrow-bar-left"> Volver al inicio </i>
       </button>
     </>
