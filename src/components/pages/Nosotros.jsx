@@ -4,7 +4,7 @@ import MarianoJuarez from "../../img/MarianoJuarez.jpg";
 import MaximilianoGomezTolra from "../../img/MaximilianoGomezTolra.jpg";
 import MaximilianoGuerrero from "../../img/MaximilianoGuerrero.jpg";
 import SebastianFlomenbaun from "../../img/SebastianFlomenbaun.jpg";
-import JoseLedesma from "../../img/JoseLedesma.jpg";
+import IgnacioLedesma from "../../img/IgnacioLedesma.jpg";
 import { Link } from "react-router-dom";
 import "../../styles/nosotros.css";
 
@@ -204,7 +204,7 @@ const Nosotros = () => {
               <Card.Img
                 variant="top"
                 className="imgCardNosotros mt-3"
-                src={JoseLedesma}
+                src={IgnacioLedesma}
                 alt="José Ingnacio Ledesma Padilla"
               />
               <Card.Body>
