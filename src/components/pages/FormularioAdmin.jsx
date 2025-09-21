@@ -11,6 +11,8 @@ const FormularioAdmin = () => {
   const [duracion, setDuracion] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
+  const [anio, setAnio] = useState("");    // ⬅️ agregado
+  const [album, setAlbum] = useState("");  // ⬅️ agregado
 
   // ✅ Ver si venimos en modo edición
   const editar = location.state?.cancion !== undefined;
@@ -24,6 +26,8 @@ const FormularioAdmin = () => {
       setCategoria(cancion.categoria);
       setImagen(cancion.imagen);
       setDuracion(cancion.duracion);
+      setAnio(cancion.anio);     // ⬅️ agregado
+      setAlbum(cancion.album);   // ⬅️ agregado
     }
   }, [editar, location.state]);
 
@@ -31,7 +35,7 @@ const FormularioAdmin = () => {
     console.log("¡El formulario fue enviado!");
     e.preventDefault();
 
-    const nuevaCancion = { titulo, artista, categoria, imagen, duracion };
+    const nuevaCancion = { titulo, artista, categoria, imagen, duracion,anio, album };
     console.log("Datos a guardar:", nuevaCancion);
     // ✅ Leer canciones de localStorage
     const data = localStorage.getItem("canciones");
@@ -86,6 +90,29 @@ const FormularioAdmin = () => {
           required
         />
       </Form.Group>
+         <Form.Group className="mb-3 ps-5">
+        <Form.Label>Álbum</Form.Label>  {/* ⬅️ agregado */}
+        <Form.Control
+          type="text"
+          placeholder="Appetite for Destruction"
+          value={album}
+          onChange={(e) => setAlbum(e.target.value)}
+          required
+        />
+      </Form.Group>
+
+      <Form.Group className="mb-3 ps-5">
+        <Form.Label>Año</Form.Label>  {/* ⬅️ agregado */}
+        <Form.Control
+          type="number"
+          placeholder="1987"
+          value={anio}
+          onChange={(e) => setAnio(e.target.value)}
+          required
+        />
+      </Form.Group>
+
+
       <Form.Group className="mb-3 ps-5" controlId="formImagen">
         <Form.Label>Imagen URL*</Form.Label>
         <Form.Control
