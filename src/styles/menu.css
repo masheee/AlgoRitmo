@@ -38,3 +38,40 @@
   
 }
 
+/* ----------- PAGE ACTIVE ------------ */
+.nav-link-custom {
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link-custom::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-secondary);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-link-custom:hover {
+  color: var(--color-secondary);
+}
+
+.nav-link-custom:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-link-custom.active {
+  color: var(--color-secondary);
+}
+
+.nav-link-custom.active::after {
+  transform: scaleX(1);
+}
+
