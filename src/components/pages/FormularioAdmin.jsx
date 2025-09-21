@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
+import { v4 as uuidv4 } from "uuid";
 import { useNavigate, useLocation } from "react-router-dom";
+import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
 import "../../styles/admin.css";
 
@@ -37,7 +39,17 @@ const FormularioAdmin = () => {
     }
   }, [editar, location.state, setValue, reset]);
 
-  const onSubmit = (data) => {
+  
+  const handleSubmit = (e) => {
+    console.log("¡El formulario fue enviado!");
+    e.preventDefault();
+
+    const nuevaCancion = { id: editar ? location.state.cancion.id : uuidv4(),titulo, artista, categoria, imagen, duracion,anio, album };
+    console.log("Datos a guardar:", nuevaCancion);
+    // ✅ Leer canciones de localStorage
+    const data = localStorage.getItem("canciones");
+    const canciones = data ? JSON.parse(data) : [];
+    const onSubmit = (data) => {
     const nuevaCancion = { ...data };
     const cancionesGuardadas = localStorage.getItem("canciones");
     const canciones = cancionesGuardadas ? JSON.parse(cancionesGuardadas) : [];
@@ -50,7 +62,16 @@ const FormularioAdmin = () => {
     }
 
     localStorage.setItem("canciones", JSON.stringify(canciones));
-    navigate("/admin");
+      
+    Swal.fire({
+        title: editar ? "Cambios guardados" : "Canción creada",
+        text: editar ? "Los datos se actualizaron correctamente" : "Tu canción fue añadida a la lista",
+        icon: "success",
+        confirmButtonText: "Ok"
+    }).then(() => {
+        // ✅ volver al admin recién después de cerrar el alert
+        navigate("/admin");
+    });
   };
 
   return (
@@ -207,12 +228,9 @@ const FormularioAdmin = () => {
           {errors.duracion?.message}
         </Form.Control.Feedback>
       </Form.Group>
-
-      <div className="text-center">
-        <Button type="submit" variant="success" className="btn-gradient mt-3">
-          {editar ? "Guardar Cambios" : "Crear Canción"}
-        </Button>
-      </div>
+      <Button type="submit" className="ms-5 btn-gradient">
+         {editar ? "Guardar Cambios" : "Crear Canción"}
+      </Button>
     </Form>
   );
 };
