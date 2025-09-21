@@ -106,7 +106,7 @@ h1 {
   box-shadow: 0 0 0 0.25rem rgba(232, 121, 249, 0.25);
 }
 
-.form-container button {
+/* .form-container button {
   background-color: var(--color-accent);
   border: none;
   padding: 0.7rem 1.5rem;
@@ -118,4 +118,4 @@ h1 {
 
 .form-container button:hover {
   background-color: var(--color-primary);
-}
+} */

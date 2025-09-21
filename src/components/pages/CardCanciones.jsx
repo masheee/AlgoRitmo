@@ -54,7 +54,7 @@ const CardCanciones = () => {
             onChange={(e) => setBusqueda(e.target.value)}
           />
           <Button
-            variant="outline-primary btn-login"
+            className="btn-gradient"
             onClick={() => setBusqueda("")}
           >
             Buscá otra
@@ -90,7 +90,7 @@ const CardCanciones = () => {
                     <Card.Text>
                       {cancion.nombreCancion || cancion.titulo}
                     </Card.Text>
-                    <Button as={Link} to="/detalles" className="btn-login w-50">
+                    <Button as={Link} to="/detalles" className="btn-gradient w-50">
                       Conocé más
                     </Button>
                   </Card.Body>

@@ -42,7 +42,7 @@ const Detalle = () => {
           </Col>
         </Row>
       </Card>
-      <button className="btn boton-detalle"><i className="bi bi-arrow-bar-left"> Volver al inicio </i></button>
+      <button className="btn boton-detalle btn-gradient"><i className="bi bi-arrow-bar-left"> Volver al Inicio </i></button>
     </>
   );
 };

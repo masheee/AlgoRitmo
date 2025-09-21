@@ -27,7 +27,7 @@
   box-shadow: 3px 3px 20px var(--color-primary);
 }
 
-.fuenteCardNosotros{
+.fuenteCardNosotros {
   font-size: medium;
 }
 
@@ -39,17 +39,21 @@
   color: var(--color-success);
 }
 
-.iconoCard:hover{
-  font-size:x-large;
-    color: var(--color-success);
-      transition: 600ms;
-
+.iconoCard:hover {
+  font-size: x-large;
+  color: var(--color-success);
+  transition: 600ms;
 }
 
 .btn-gradient {
-  background: linear-gradient(45deg, var(--color-success), var(--color-accent), var(--color-secondary);
-  color: #1e1b29;
-  border: 2px solid #a78bfa;
+  background: radial-gradient(
+    circle,
+    var(--color-accent) 50%,
+    var(--color-primary) 100%
+  );
+  color: var(--color-surface);
+
+  border: 2px solid var(--color-primary);
   font-weight: bold;
   padding: 0.6rem 1.4rem;
   border-radius: 10px;
@@ -58,11 +62,19 @@
 }
 
 .btn-gradient:hover {
-  background: linear-gradient(deg, #8b5cf6, #e879f9, #34d399);
-  color: #f3f4f6;
-  border: 2px solid #a78bfa;
-  box-shadow: 0 4px 15px #a78bfa;
+  background: radial-gradient(
+    circle,
+    var(--color-primary) 50%,
+    var(--color-success) 100%
+  );
+  color: var(--color-text);
+  border: 2px solid var(--color-success);
+  box-shadow: 0px 4px 10px var(--color-success);
   transform: scale(1.05);
+}
+
+.btn-gradient:focus{
+  border-color: var(--color-success) !important;
 }
 
 .fuenteLogo {
@@ -70,5 +82,11 @@
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
-  
+}
+
+@media (min-width: 768px) {
+  .cardNosotros:hover {
+    transform: scale(1.005);
+    transition: transform 0.3s ease;
+  }
 }
