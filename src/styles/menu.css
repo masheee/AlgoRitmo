@@ -20,7 +20,7 @@
 }
 
 /* Botón de ingresar */
-.btn-login {
+/* .btn-login {
   background-color: var(--color-primary);
   border: none;
   color: #fff;
@@ -28,7 +28,7 @@
 
 .btn-login:hover {
   background-color: var(--color-accent);
-}
+} */
 
 .fuenteLogo {
   font-family: "Sometype Mono", monospace;

@@ -33,10 +33,10 @@ const logout = () => {
                 <NavLink to="/admin" className="nav-link-custom nav-link">
                   Administrador
                 </NavLink>
-                <Button className="navbar-custom border-0 btn-cerrarSesion" onClick={logout}>Cerrar Sesión</Button>
+                <Button className="navbar-custom btn-sesion" onClick={logout}>Cerrar Sesión</Button>
               </>
             ) : (
-              <Button href="/login" className="btn-login ms-lg-3 mt-3 mt-lg-0">
+              <Button href="/login" className="ms-lg-3 mt-3 mt-lg-0 btn-sesion">
                 Ingresar
               </Button>
             )}
