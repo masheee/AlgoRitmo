@@ -105,7 +105,7 @@ const FormularioAdmin = () => {
           required
         />
       </Form.Group>
-      <Button type="submit" variant="success" className="ms-5">
+      <Button type="submit" /* variant="success" */ className="ms-5 btn-gradient">
          {editar ? "Guardar Cambios" : "Crear Canción"}
       </Button>
     </Form>

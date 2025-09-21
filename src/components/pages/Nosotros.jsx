@@ -238,7 +238,7 @@ const Nosotros = () => {
       </Container>
       <div className="d-flex justify-content-center">
       <Button as={Link} to="/" className="justify-content-items-center btn-gradient my-5">
-        <i className="bi bi-arrow-bar-left"> Volver al inicio </i>
+        <i className="bi bi-arrow-bar-left"> Volver al Inicio </i>
       </Button>
       </div>
     </section>
