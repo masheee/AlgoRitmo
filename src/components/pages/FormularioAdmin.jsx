@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
+import { v4 as uuidv4 } from "uuid";
 import { useNavigate, useLocation } from "react-router-dom";
+import Swal from "sweetalert2";
 import "../../styles/admin.css";
 
 const FormularioAdmin = () => {
@@ -35,7 +37,7 @@ const FormularioAdmin = () => {
     console.log("¡El formulario fue enviado!");
     e.preventDefault();
 
-    const nuevaCancion = { titulo, artista, categoria, imagen, duracion,anio, album };
+    const nuevaCancion = { id: editar ? location.state.cancion.id : uuidv4(),titulo, artista, categoria, imagen, duracion,anio, album };
     console.log("Datos a guardar:", nuevaCancion);
     // ✅ Leer canciones de localStorage
     const data = localStorage.getItem("canciones");
@@ -51,9 +53,15 @@ const FormularioAdmin = () => {
 
     // ✅ Guardar actualizado
     localStorage.setItem("canciones", JSON.stringify(canciones));
-    console.log("Datos guardados en localStorage.");
-    // ✅ Volver a administrador
-    navigate("/admin");
+    Swal.fire({
+        title: editar ? "Cambios guardados" : "Canción creada",
+        text: editar ? "Los datos se actualizaron correctamente" : "Tu canción fue añadida a la lista",
+        icon: "success",
+        confirmButtonText: "Ok"
+    }).then(() => {
+        // ✅ volver al admin recién después de cerrar el alert
+        navigate("/admin");
+    });
   };
 
   return (
@@ -132,7 +140,7 @@ const FormularioAdmin = () => {
           required
         />
       </Form.Group>
-      <Button type="submit" /* variant="success" */ className="ms-5 btn-gradient">
+      <Button type="submit" className="ms-5 btn-gradient">
          {editar ? "Guardar Cambios" : "Crear Canción"}
       </Button>
     </Form>
