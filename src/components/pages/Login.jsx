@@ -17,7 +17,7 @@ const LoginPage = ({ setUsuarioLogueado }) => {
     formState: { errors },
   } = useForm();
 
-  const navegacion = useNavigate()
+  const navegacion = useNavigate();
 
   const onSubmit = (data) => {
     console.log(data);
@@ -31,7 +31,7 @@ const LoginPage = ({ setUsuarioLogueado }) => {
         text: "Iniciaste sesión correctamente",
         icon: "success",
       });
-      navegacion ("/admin")
+      navegacion("/admin");
     } else {
       Swal.fire({
         title: "Ocurrió un error",

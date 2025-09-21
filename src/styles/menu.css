@@ -19,23 +19,11 @@
   color: var(--color-text) !important;
 }
 
-/* Botón de ingresar */
-/* .btn-login {
-  background-color: var(--color-primary);
-  border: none;
-  color: #fff;
-}
-
-.btn-login:hover {
-  background-color: var(--color-accent);
-} */
-
 .fuenteLogo {
   font-family: "Sometype Mono", monospace;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
-  
 }
 
 /* ----------- PAGE ACTIVE ------------ */
@@ -46,7 +34,7 @@
 }
 
 .nav-link-custom::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -3px;
@@ -74,4 +62,3 @@
 .nav-link-custom.active::after {
   transform: scaleX(1);
 }
-

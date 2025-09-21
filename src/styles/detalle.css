@@ -1,24 +1,13 @@
-
 /* fondo de la card */
-.fondo-detalle{
-    background-color: var(--color-surface); 
+.fondo-detalle {
+  background-color: var(--color-surface);
 }
 
 /* texto */
-.texto-detalle{
-    color: var(--color-primary);
+.texto-detalle {
+  color: var(--color-primary);
 }
 
-.texto{
-    color: var(--color-success) !important;
+.texto {
+  color: var(--color-success) !important;
 }
-
-/* boton */
-/* .boton-detalle{
-    background-color: var(--color-secondary);
-    color: var(--color-surface);
-}
-
-.boton-detalle:hover{
-    background-color: var(--color-primary);
-} */
