@@ -63,7 +63,6 @@
     var(--color-primary) 100%
   );
   color: var(--color-surface);
-
   border: 2px solid var(--color-primary);
   font-weight: bold;
   padding: 0.6rem 1.4rem;
