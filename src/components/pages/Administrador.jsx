@@ -109,7 +109,7 @@ useEffect(() => {
       >
         <thead>
           <tr className="text-center">
-            <th>Código</th>
+            <th>N°</th>
             <th>Título</th>
             <th>Artista/Grupo</th>
             <th>Categoría</th>

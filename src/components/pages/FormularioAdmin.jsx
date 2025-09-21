@@ -40,39 +40,33 @@ const FormularioAdmin = () => {
   }, [editar, location.state, setValue, reset]);
 
   
-  const handleSubmit = (e) => {
-    console.log("¡El formulario fue enviado!");
-    e.preventDefault();
-
-    const nuevaCancion = { id: editar ? location.state.cancion.id : uuidv4(),titulo, artista, categoria, imagen, duracion,anio, album };
-    console.log("Datos a guardar:", nuevaCancion);
-    // ✅ Leer canciones de localStorage
-    const data = localStorage.getItem("canciones");
-    const canciones = data ? JSON.parse(data) : [];
-    const onSubmit = (data) => {
-    const nuevaCancion = { ...data };
-    const cancionesGuardadas = localStorage.getItem("canciones");
-    const canciones = cancionesGuardadas ? JSON.parse(cancionesGuardadas) : [];
-
-    if (editar) {
-      canciones[editarIndex] = nuevaCancion;
-    } else {
-      canciones.push(nuevaCancion);
-      reset(); // ✅ Limpia después de crear
-    }
-
-    localStorage.setItem("canciones", JSON.stringify(canciones));
-      
-    Swal.fire({
-        title: editar ? "Cambios guardados" : "Canción creada",
-        text: editar ? "Los datos se actualizaron correctamente" : "Tu canción fue añadida a la lista",
-        icon: "success",
-        confirmButtonText: "Ok"
-    }).then(() => {
-        // ✅ volver al admin recién después de cerrar el alert
-        navigate("/admin");
-    });
+  const onSubmit = (data) => {
+  const nuevaCancion = {
+    id: editar ? location.state.cancion.id : uuidv4(),
+    ...data,
   };
+
+  const cancionesGuardadas = localStorage.getItem("canciones");
+  const canciones = cancionesGuardadas ? JSON.parse(cancionesGuardadas) : [];
+
+  if (editar) {
+    canciones[editarIndex] = nuevaCancion;
+  } else {
+    canciones.push(nuevaCancion);
+    reset(); // ✅ limpia después de crear
+  }
+
+  localStorage.setItem("canciones", JSON.stringify(canciones));
+
+  Swal.fire({
+    title: editar ? "Cambios guardados" : "Canción creada",
+    text: editar
+      ? "Los datos se actualizaron correctamente"
+      : "Tu canción fue añadida a la lista",
+    icon: "success",
+    confirmButtonText: "Ok",
+  }).then(() => navigate("/admin"));
+};
 
   return (
     <Form
