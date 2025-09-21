@@ -236,9 +236,11 @@ const Nosotros = () => {
           </Col>
         </Row>
       </Container>
-      <Button className="d-flex justify-content-center btn-gradient">
-        Volver al Inicio
+      <div className="d-flex justify-content-center">
+      <Button as={Link} to="/" className="justify-content-items-center btn-gradient my-5">
+        <i className="bi bi-arrow-bar-left"> Volver al inicio </i>
       </Button>
+      </div>
     </section>
   );
 };
