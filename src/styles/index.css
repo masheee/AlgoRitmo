@@ -39,9 +39,11 @@ main {
 
 .cardHover:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+/*   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); */
   z-index: 2;
   background-color: rgba(0, 123, 255, 0.1);
+  transition: 600ms;
+  box-shadow: 3px 3px 20px var(--color-primary);
 }
 
 /*----------ESTO ES ESTILO DE BOTONES------------*/
