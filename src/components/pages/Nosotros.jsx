@@ -40,7 +40,7 @@ const Nosotros = () => {
                 alt="Maxi Tolra"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">
+                <Card.Title className="nameCardNosotros">
                   Maximiliano Gómez Tolra
                 </Card.Title>
                 <Row>
@@ -76,7 +76,7 @@ const Nosotros = () => {
                 alt="Tali Cabana"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">
+                <Card.Title className="nameCardNosotros">
                   Paula Cabana
                 </Card.Title>
                 <Row>
@@ -112,7 +112,7 @@ const Nosotros = () => {
                 alt="Sebas Flomenbaun"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">
+                <Card.Title className="nameCardNosotros">
                   Sebastián Flomenbaun
                 </Card.Title>
                 <Row>
@@ -144,7 +144,7 @@ const Nosotros = () => {
                 alt="Pollo Juárez"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">
+                <Card.Title className="nameCardNosotros">
                   Mariano Juárez
                 </Card.Title>
                 <Row>
@@ -176,7 +176,7 @@ const Nosotros = () => {
                 alt="Maxi Guerrero"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">
+                <Card.Title className="nameCardNosotros">
                   Maximiliano Guerrero
                 </Card.Title>
                 <Row>
@@ -198,7 +198,7 @@ const Nosotros = () => {
               </Card.Body>
             </Card>
           </Col>
-          {/*José I  Faltan imagen y links*/}
+          {/*Nacho*/}
           <Col xs={10} md={4} lg={2}>
             <Card className="cardNosotros h-100">
               <Card.Img
@@ -208,8 +208,8 @@ const Nosotros = () => {
                 alt="José Ingnacio Ledesma Padilla"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">
-                  Ingnacio Ledesma Padilla
+                <Card.Title className="nameCardNosotros">
+                  Ingnacio Ledesma
                 </Card.Title>
                 <Row>
                   <Col xs={6} className="text-center">
