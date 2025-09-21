@@ -28,7 +28,7 @@ const Nosotros = () => {
         No solo construimos una App: construimos un espacio donde la música y la tecnología se encuentran para acompañarte a vivir a tu propio ritmo.
       </p>
 
-      <Container className="mb-5">
+      <Container className="mb-3">
         <Row className="row-gap-3 justify-content-center">
           {/*Maxi Tolra*/}
           <Col xs={10} md={4} lg={2}>
@@ -237,7 +237,7 @@ const Nosotros = () => {
         </Row>
       </Container>
       <div className="d-flex justify-content-center">
-      <Button as={Link} to="/" className="justify-content-items-center btn-gradient my-5">
+      <Button as={Link} to="/" className="justify-content-items-center btn-gradient mb-4">
         <i className="bi bi-arrow-bar-left"> Volver al Inicio </i>
       </Button>
       </div>
