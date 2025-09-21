@@ -1,14 +1,13 @@
-/* Encabezados */
 h1 {
   color: var(--color-primary);
 }
 
-/* ---------- Botones ---------- */
 .admin-button,
 .admin-button-edit {
   background-color: var(--color-primary);
   text-decoration: none;
   border-style: none;
+  height: 40px;
 }
 
 .admin-button:hover,
@@ -27,10 +26,10 @@ h1 {
   background-color: rgb(119, 21, 21);
 }
 
-/* Botón Buscar */
 .admin-control-buscar {
   border: 1px solid var(--color-primary);
   text-decoration: none;
+  height: 40px;
 }
 
 .admin-control-buscar:hover {
@@ -42,7 +41,6 @@ h1 {
   box-shadow: 0 0 0 0.1rem var(--color-success);
 }
 
-/* ---------- Tablas ---------- */
 .admin-table thead tr th {
   background-color: #4b2f70;
   color: #fff;
@@ -62,13 +60,12 @@ h1 {
   color: var(--color-primary);
 }
 
-/* ---------- Formularios ---------- */
 .form-container {
   background-color: var(--color-surface);
-  padding: 2rem; /* unificado */
+  padding: 2rem;
   border-radius: 1rem;
-  max-width: 600px; /* ancho máximo */
-  margin: auto; /* centrar */
+  max-width: 600px;
+  margin: auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   color: var(--color-text);
 }
@@ -76,7 +73,7 @@ h1 {
 .form-container h2 {
   color: var(--color-primary);
   text-align: center;
-  margin-bottom: 1.5rem; /* unificado */
+  margin-bottom: 1.5rem;
 }
 
 .form-container .form-label {
@@ -90,7 +87,7 @@ h1 {
   color: var(--color-text);
   border-radius: 10px;
   padding: 7px 15px;
-  max-width: 400px; /* inputs más cortos */
+  max-width: 400px;
 }
 
 .form-container .form-control:focus {
@@ -98,7 +95,6 @@ h1 {
   box-shadow: 0 0 0 0.25rem rgba(232, 121, 249, 0.25);
 }
 
-/* ---------- Botón Gradient ---------- */
 .btn-gradient {
   background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
   color: #fff;
@@ -114,7 +110,6 @@ h1 {
   transform: scale(1.05);
 }
 
-/* ---------- React-Select ---------- */
 .form-container .select__control {
   background-color: var(--color-bg) !important;
   border: 1px solid var(--color-primary) !important;
@@ -150,4 +145,23 @@ h1 {
 
 .select__single-value {
   color: var(--color-text) !important;
+}
+
+.admin-control-buscar,
+.admin-button {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.form-control::placeholder {
+  color: var(--color-muted);
+  opacity: 1;
+}
+
+.select__placeholder {
+  color: var(--color-muted) !important;
 }

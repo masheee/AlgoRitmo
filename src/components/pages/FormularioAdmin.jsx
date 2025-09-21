@@ -141,7 +141,7 @@ const FormularioAdmin = () => {
           )}
         />
         {errors.categoria && (
-          <p className="text-danger mt-1">{errors.categoria.message}</p>
+          <p className="invalid-feedback d-block">{errors.categoria.message}</p>
         )}
       </Form.Group>
 

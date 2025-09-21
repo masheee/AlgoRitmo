@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Button, Form, Table } from "react-bootstrap";
+import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import "../../styles/admin.css";
-
 
 const Administrador = () => {
   const navigate = useNavigate();
@@ -12,29 +12,23 @@ const Administrador = () => {
 
   const handleChange = (e) => {
     setSearchTerm(e.target.value);
-};
+  };
 
-useEffect(() => {
+  useEffect(() => {
     if (searchTerm) {
-        const searchCode = parseInt(searchTerm);
-        const filtered = canciones.filter(
-            (cancion, i) =>
-                cancion.titulo
-                    .toLowerCase()
-                    .includes(searchTerm.toLowerCase()) ||
-                cancion.artista
-                    .toLowerCase()
-                    .includes(searchTerm.toLowerCase()) ||
-                (!isNaN(searchCode) && i + 1 === searchCode) ||
-                cancion.categoria
-                    .toLowerCase()
-                    .includes(searchTerm.toLowerCase())
-        );
-        setFilteredSongs(filtered);
+      const searchCode = parseInt(searchTerm);
+      const filtered = canciones.filter(
+        (cancion, i) =>
+          cancion.titulo.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          cancion.artista.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          (!isNaN(searchCode) && i + 1 === searchCode) ||
+          cancion.categoria.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setFilteredSongs(filtered);
     } else {
-        setFilteredSongs(canciones);
+      setFilteredSongs(canciones);
     }
-}, [searchTerm, canciones]);
+  }, [searchTerm, canciones]);
   // ✅ Cargar canciones desde localStorage al iniciar
   useEffect(() => {
     const data = localStorage.getItem("canciones");
@@ -45,10 +39,29 @@ useEffect(() => {
 
   // ✅ Borrar canción
   const handleDelete = (index) => {
-    const cancionActual = [...canciones];
-    cancionActual.splice(index, 1);
-    localStorage.setItem("canciones", JSON.stringify(cancionActual));
-    setCanciones(cancionActual);
+    Swal.fire({
+      title: "¿Estás seguro?",
+      text: "Esta acción no se puede deshacer",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Sí, eliminar",
+      cancelButtonText: "Cancelar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const cancionActual = [...canciones];
+        cancionActual.splice(index, 1);
+        localStorage.setItem("canciones", JSON.stringify(cancionActual));
+        setCanciones(cancionActual);
+
+        Swal.fire(
+          "Eliminada",
+          "La canción fue eliminada correctamente",
+          "success"
+        );
+      }
+    });
   };
 
   // ✅ Editar canción → manda datos al formulario
@@ -70,18 +83,18 @@ useEffect(() => {
 
       <div className="mt-4">
         <Form className="row g-2">
-    <div className="col-12 col-lg-6 col-md-8 d-flex">
-        <Form.Control
-            type="search"
-            placeholder="Buscar canción..."
-            className="me-2 admin-control-buscar"
-            aria-label="Buscar"
-            onChange={handleChange}
-            value={searchTerm}
-        />
-        {/* <Button className="admin-button">Buscar</Button> */}
-    </div>
-</Form>
+          <div className="col-12 col-lg-6 col-md-8 d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Buscar canción..."
+              className="me-2 admin-control-buscar"
+              aria-label="Buscar"
+              onChange={handleChange}
+              value={searchTerm}
+            />
+            {/* <Button className="admin-button">Buscar</Button> */}
+          </div>
+        </Form>
       </div>
 
       <Table
@@ -102,13 +115,13 @@ useEffect(() => {
           </tr>
         </thead>
         <tbody className="text-center">
-    {filteredSongs.length > 0 ? (
-        filteredSongs.map((cancion, i) => (
-            <tr key={i}>
+          {filteredSongs.length > 0 ? (
+            filteredSongs.map((cancion, i) => (
+              <tr key={i}>
                 <td>{i + 1}</td>
                 <td>{cancion.titulo}</td>
                 <td>{cancion.artista}</td>
-                <td>{cancion.categoria}</td>
+                <td>{cancion.categoria.label}</td>
                 <td>{cancion.duracion}</td>
                 <td className="text-center">
                   <Button
@@ -124,14 +137,16 @@ useEffect(() => {
                     <i className="bi bi-trash"></i>
                   </Button>
                 </td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan="6">
+                No hay canciones que coincidan con la búsqueda.
+              </td>
             </tr>
-        ))
-    ) : (
-        <tr>
-            <td colSpan="6">No hay canciones que coincidan con la búsqueda.</td>
-        </tr>
-    )}
-</tbody>
+          )}
+        </tbody>
       </Table>
     </section>
   );
