@@ -4,7 +4,7 @@ import MarianoJuarez from "../../img/MarianoJuarez.jpg";
 import MaximilianoGomezTolra from "../../img/MaximilianoGomezTolra.jpg";
 import MaximilianoGuerrero from "../../img/MaximilianoGuerrero.jpg";
 import SebastianFlomenbaun from "../../img/SebastianFlomenbaun.jpg";
-import JoseLedesma from "../../img/JoseLedesma.jpg";
+import IgnacioLedesma from "../../img/IgnacioLedesma.jpg";
 import { Link } from "react-router-dom";
 import "../../styles/nosotros.css";
 
@@ -28,7 +28,7 @@ const Nosotros = () => {
         No solo construimos una App: construimos un espacio donde la música y la tecnología se encuentran para acompañarte a vivir a tu propio ritmo.
       </p>
 
-      <Container className="mb-5">
+      <Container className="mb-3">
         <Row className="row-gap-3 justify-content-center">
           {/*Maxi Tolra*/}
           <Col xs={10} md={4} lg={2}>
@@ -40,7 +40,7 @@ const Nosotros = () => {
                 alt="Maxi Tolra"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">
+                <Card.Title className="nameCardNosotros">
                   Maximiliano Gómez Tolra
                 </Card.Title>
                 <Row>
@@ -76,11 +76,11 @@ const Nosotros = () => {
                 alt="Tali Cabana"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">
+                <Card.Title className="nameCardNosotros">
                   Paula Cabana
                 </Card.Title>
                 <Row>
-                  <Col xs={6} className="text-center mb-3">
+                  <Col xs={6} className="text-center">
                     <a
                       href="https://github.com/TaliCabana"
                       target="_blank"
@@ -112,7 +112,7 @@ const Nosotros = () => {
                 alt="Sebas Flomenbaun"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">
+                <Card.Title className="nameCardNosotros">
                   Sebastián Flomenbaun
                 </Card.Title>
                 <Row>
@@ -144,7 +144,7 @@ const Nosotros = () => {
                 alt="Pollo Juárez"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">
+                <Card.Title className="nameCardNosotros">
                   Mariano Juárez
                 </Card.Title>
                 <Row>
@@ -176,7 +176,7 @@ const Nosotros = () => {
                 alt="Maxi Guerrero"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">
+                <Card.Title className="nameCardNosotros">
                   Maximiliano Guerrero
                 </Card.Title>
                 <Row>
@@ -198,23 +198,23 @@ const Nosotros = () => {
               </Card.Body>
             </Card>
           </Col>
-          {/*José I  Faltan imagen y links*/}
+          {/*Nacho*/}
           <Col xs={10} md={4} lg={2}>
             <Card className="cardNosotros h-100">
               <Card.Img
                 variant="top"
                 className="imgCardNosotros mt-3"
-                src={JoseLedesma}
+                src={IgnacioLedesma}
                 alt="José Ingnacio Ledesma Padilla"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">
-                  José Ingnacio Ledesma Padilla
+                <Card.Title className="nameCardNosotros">
+                  Ingnacio Ledesma
                 </Card.Title>
                 <Row>
                   <Col xs={6} className="text-center">
                     <a
-                      href="https://github.com/TaliCabana"
+                      href="https://github.com/ledesmapadilla"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -223,7 +223,7 @@ const Nosotros = () => {
                   </Col>
                   <Col xs={6} className="text-center">
                     <a
-                      href="https://www.linkedin.com/in/paula-cabana-ingenieraindustrial/"
+                      href="*"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -237,7 +237,7 @@ const Nosotros = () => {
         </Row>
       </Container>
       <div className="d-flex justify-content-center">
-      <Button as={Link} to="/" className="justify-content-items-center btn-gradient my-5">
+      <Button as={Link} to="/" className="justify-content-items-center btn-gradient mb-4">
         <i className="bi bi-arrow-bar-left"> Volver al Inicio </i>
       </Button>
       </div>
