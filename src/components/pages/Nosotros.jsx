@@ -29,9 +29,9 @@ const Nosotros = () => {
       </p>
 
       <Container className="mb-5">
-        <Row className="row-gap-3">
+        <Row className="row-gap-3 justify-content-center">
           {/*Maxi Tolra*/}
-          <Col xs={12} md={4} lg={2}>
+          <Col xs={10} md={4} lg={2}>
             <Card className="cardNosotros h-100">
               <Card.Img
                 variant="top"
@@ -67,7 +67,7 @@ const Nosotros = () => {
             </Card>
           </Col>
           {/*Tali*/}
-          <Col xs={12} md={4} lg={2}>
+          <Col xs={10} md={4} lg={2}>
             <Card className="cardNosotros h-100">
               <Card.Img
                 variant="top"
@@ -103,7 +103,7 @@ const Nosotros = () => {
             </Card>
           </Col>
           {/*Sebas*/}
-          <Col xs={12} md={4} lg={2}>
+          <Col xs={10} md={4} lg={2}>
             <Card className="cardNosotros h-100">
               <Card.Img
                 variant="top"
@@ -135,7 +135,7 @@ const Nosotros = () => {
             </Card>
           </Col>
           {/*Pollo*/}
-          <Col xs={12} md={4} lg={2}>
+          <Col xs={10} md={4} lg={2}>
             <Card className="cardNosotros h-100">
               <Card.Img
                 variant="top"
@@ -167,7 +167,7 @@ const Nosotros = () => {
             </Card>
           </Col>
           {/*Maxi G*/}
-          <Col xs={12} md={4} lg={2}>
+          <Col xs={10} md={4} lg={2}>
             <Card className="cardNosotros h-100">
               <Card.Img
                 variant="top"
@@ -199,7 +199,7 @@ const Nosotros = () => {
             </Card>
           </Col>
           {/*José I  Faltan imagen y links*/}
-          <Col xs={12} md={4} lg={2}>
+          <Col xs={10} md={4} lg={2}>
             <Card className="cardNosotros h-100">
               <Card.Img
                 variant="top"
