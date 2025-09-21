@@ -32,7 +32,7 @@ export default function AppLayout() {
         <Container>
         <Routes>
           <Route path="/" element={<CardCanciones />} />
-          <Route path="/detalles" element={<Detalle />} />
+          <Route path="/detalles/:id" element={<Detalle />} />
           <Route
             path="/login"
             element={<Login setUsuarioLogueado={setUsuarioLogueado} />}

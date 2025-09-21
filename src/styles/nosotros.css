@@ -47,7 +47,7 @@
 }
 
 .btn-gradient {
-  background: linear-gradient(45deg, var(--color-success), var(--color-accent), var(--color-secondary);
+  background: linear-gradient(45deg, var(--color-success), var(--color-accent), var(--color-secondary));
   color: #1e1b29;
   border: 2px solid #a78bfa;
   font-weight: bold;
