@@ -209,7 +209,7 @@ const FormularioAdmin = () => {
       </Form.Group>
 
       <div className="text-center">
-        <Button type="submit" variant="success" className="mt-3">
+        <Button type="submit" variant="success" className="btn-gradient mt-3">
           {editar ? "Guardar Cambios" : "Crear Canción"}
         </Button>
       </div>
