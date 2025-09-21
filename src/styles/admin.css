@@ -1,15 +1,20 @@
+/* Encabezados */
 h1 {
   color: var(--color-primary);
 }
 
-.admin-button {
+/* ---------- Botones ---------- */
+.admin-button,
+.admin-button-edit {
   background-color: var(--color-primary);
   text-decoration: none;
+  border-style: none;
 }
 
-.admin-button:hover {
-  color: var(--color-success);
+.admin-button:hover,
+.admin-button-edit:hover {
   background-color: var(--color-accent);
+  color: var(--color-success);
 }
 
 .admin-button-trash {
@@ -20,20 +25,9 @@ h1 {
 
 .admin-button-trash:hover {
   background-color: rgb(119, 21, 21);
-  text-decoration: none;
 }
 
-.admin-button-edit {
-  background-color: var(--color-primary);
-  text-decoration: none;
-  border-style: none;
-}
-
-.admin-button-edit:hover {
-  background-color: rgb(93, 30, 93);
-  text-decoration: none;
-}
-
+/* Botón Buscar */
 .admin-control-buscar {
   border: 1px solid var(--color-primary);
   text-decoration: none;
@@ -48,43 +42,41 @@ h1 {
   box-shadow: 0 0 0 0.1rem var(--color-success);
 }
 
-/* Encabezado */
+/* ---------- Tablas ---------- */
 .admin-table thead tr th {
   background-color: #4b2f70;
   color: #fff;
 }
 
-/* Filas impares */
 .admin-table tbody tr:nth-child(odd) td {
   background-color: #2e1a47;
   color: #fff;
 }
 
-/* Filas pares */
 .admin-table tbody tr:nth-child(even) td {
   background-color: #3c2461;
   color: #fff;
 }
 
-/* Hover */
 .admin-table tbody tr:hover td {
   color: var(--color-primary);
 }
 
+/* ---------- Formularios ---------- */
 .form-container {
   background-color: var(--color-surface);
-  padding: 40px;
+  padding: 2rem; /* unificado */
   border-radius: 1rem;
   max-width: 600px; /* ancho máximo */
   margin: auto; /* centrar */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   color: var(--color-text);
 }
 
 .form-container h2 {
   color: var(--color-primary);
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem; /* unificado */
 }
 
 .form-container .form-label {
@@ -106,16 +98,56 @@ h1 {
   box-shadow: 0 0 0 0.25rem rgba(232, 121, 249, 0.25);
 }
 
-/* .form-container button {
-  background-color: var(--color-accent);
+/* ---------- Botón Gradient ---------- */
+.btn-gradient {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: #fff;
   border: none;
-  padding: 0.7rem 1.5rem;
-  font-weight: 600;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
   border-radius: 0.5rem;
-  margin-top: 1rem;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.form-container button:hover {
-  background-color: var(--color-primary);
-} */
+.btn-gradient:hover {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
+  transform: scale(1.05);
+}
+
+/* ---------- React-Select ---------- */
+.form-container .select__control {
+  background-color: var(--color-bg) !important;
+  border: 1px solid var(--color-primary) !important;
+  border-radius: 0.5rem !important;
+  color: var(--color-text) !important;
+  max-width: 400px;
+  width: 100% !important;
+  min-height: 38px !important;
+}
+
+.form-container .select__menu {
+  background-color: var(--color-surface) !important;
+  color: var(--color-text) !important;
+  max-width: 400px;
+  width: 100% !important;
+}
+
+.select__option {
+  background-color: var(--color-surface) !important;
+  color: var(--color-text) !important;
+  padding: 0.5rem;
+}
+
+.select__option--is-selected {
+  background-color: var(--color-primary) !important;
+  color: #fff !important;
+}
+
+.select__option--is-focused {
+  background-color: var(--color-accent) !important;
+  color: #fff !important;
+}
+
+.select__single-value {
+  color: var(--color-text) !important;
+}

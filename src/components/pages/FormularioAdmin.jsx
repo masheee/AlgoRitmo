@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useNavigate, useLocation } from "react-router-dom";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
+import Select from "react-select";
 import "../../styles/admin.css";
 
 const FormularioAdmin = () => {
@@ -10,13 +11,23 @@ const FormularioAdmin = () => {
     handleSubmit,
     setValue,
     reset,
+    control,
     formState: { errors },
   } = useForm();
 
   const navigate = useNavigate();
   const location = useLocation();
 
-  // ✅ Ver si venimos en modo edición
+  // Opciones de categorías
+  const opcionesCategorias = [
+    { value: "rock", label: "Rock" },
+    { value: "pop", label: "Pop" },
+    { value: "jazz", label: "Jazz" },
+    { value: "reggae", label: "Reggae" },
+    { value: "rap", label: "Rap" },
+  ];
+
+  // Ver si venimos en modo edición
   const editar = location.state?.cancion !== undefined;
   const editarIndex = location.state?.index;
 
@@ -32,13 +43,14 @@ const FormularioAdmin = () => {
       setValue("anio", cancion.anio);
       setValue("album", cancion.album);
     } else {
-      // ✅ Si no estamos editando, limpia el formulario
+      // Si no estamos editando, limpia el formulario
       reset();
     }
   }, [editar, location.state, setValue, reset]);
 
   const onSubmit = (data) => {
-    const nuevaCancion = { ...data };
+    // Genera un código único
+    const nuevaCancion = { id: Date.now(), ...data };
     const cancionesGuardadas = localStorage.getItem("canciones");
     const canciones = cancionesGuardadas ? JSON.parse(cancionesGuardadas) : [];
 
@@ -46,7 +58,7 @@ const FormularioAdmin = () => {
       canciones[editarIndex] = nuevaCancion;
     } else {
       canciones.push(nuevaCancion);
-      reset(); // ✅ Limpia después de crear
+      reset(); // Limpia después de crear
     }
 
     localStorage.setItem("canciones", JSON.stringify(canciones));
@@ -115,17 +127,22 @@ const FormularioAdmin = () => {
       {/* Categoría */}
       <Form.Group className="mb-3 ps-5">
         <Form.Label>Categoría</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="Rock"
-          {...register("categoria", {
-            required: "La categoría es obligatoria",
-          })}
-          isInvalid={!!errors.categoria}
+        <Controller
+          name="categoria"
+          control={control}
+          rules={{ required: "La categoría es obligatoria" }}
+          render={({ field }) => (
+            <Select
+              {...field}
+              options={opcionesCategorias}
+              placeholder="-- Selecciona un género --"
+              classNamePrefix="select"
+            />
+          )}
         />
-        <Form.Control.Feedback type="invalid">
-          {errors.categoria?.message}
-        </Form.Control.Feedback>
+        {errors.categoria && (
+          <p className="text-danger mt-1">{errors.categoria.message}</p>
+        )}
       </Form.Group>
 
       {/* Álbum */}
@@ -177,7 +194,7 @@ const FormularioAdmin = () => {
           placeholder="https://ejemplo.com/imagen.jpg"
           {...register("imagen", {
             pattern: {
-              value: /^https?:\/\/.+\.(jpg|jpeg|png|gif)$/i,
+              value: /^https?:\/\/.+\.(jpg|jpeg|png|gif|webp)$/i,
               message: "Debe ser una URL válida de imagen",
             },
           })}
@@ -197,8 +214,8 @@ const FormularioAdmin = () => {
           {...register("duracion", {
             required: "La duración es obligatoria",
             pattern: {
-              value: /^\d{2}:\d{2}$/,
-              message: "Formato inválido (usar mm:ss)",
+              value: /^(\d{1,2}):([0-5]\d)$/,
+              message: "Formato inválido (usar mm:ss o m:ss)",
             },
           })}
           isInvalid={!!errors.duracion}
