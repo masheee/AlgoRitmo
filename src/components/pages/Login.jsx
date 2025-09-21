@@ -92,7 +92,7 @@ const LoginPage = ({ setUsuarioLogueado }) => {
             </Form.Text>
           </Form.Group>
 
-          <Button type="submit" className="btn-login w-100">
+          <Button type="submit" className="btn-login w-100 btn-gradient">
             Ingresar
           </Button>
         </Form>
