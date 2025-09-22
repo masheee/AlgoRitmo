@@ -34,7 +34,7 @@ const Detalle = () => {
             <Card.Img
               src={cancion.imagen}
               alt="Portada de cancion"
-              className="img-fluid rounded"
+              className="img-fluid rounded detalleImg"
             />
           </Col>
 
