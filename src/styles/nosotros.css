@@ -94,6 +94,10 @@
   font-style: normal;
 }
 
+.h2Nosotros{
+  color: var(--color-secondary);
+}
+
 @media (min-width: 768px) {
   .cardNosotros:hover {
     transform: scale(1.005);

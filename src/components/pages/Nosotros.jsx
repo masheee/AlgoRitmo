@@ -11,7 +11,7 @@ import "../../styles/nosotros.css";
 const Nosotros = () => {
   return (
     <section className="container">
-      <h2 className="text-center">¿Quiénes somos?</h2>
+      <h2 className="text-center my-3 h2Nosotros">¿Quiénes somos?</h2>
       <p>
         Somos un equipo de desarrolladores apasionados por la tecnología, la
         creatividad y como vos, también por la música. Creemos que las melodías
