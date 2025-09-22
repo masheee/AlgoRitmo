@@ -124,7 +124,7 @@ useEffect(() => {
                 <td>{i + 1}</td>
                 <td>{cancion.titulo}</td>
                 <td>{cancion.artista}</td>
-                <td>{cancion.categoria}</td>
+                <td>{cancion.categoria.label}</td>
                 <td>{cancion.duracion}</td>
                 <td className="text-center">
                   <Button
