@@ -54,11 +54,8 @@ main {
     var(--color-primary) 100%
   );
   color: var(--color-surface);
-
   border: 2px solid var(--color-primary);
-  margin-top: 1rem;
-  font-weight: bold;
-  padding: 0.6rem 1.4rem;
+  padding: 10px 14px;
   border-radius: 10px;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -97,5 +94,3 @@ main {
 .btn-sesion:focus {
   background-color: #8a5cf61b !important;
 }
-
-/*----------------------------------------------------*/

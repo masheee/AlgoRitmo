@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .imgCardNosotros {
@@ -64,8 +64,6 @@
   );
   color: var(--color-surface);
   border: 2px solid var(--color-primary);
-  font-weight: bold;
-  padding: 0.6rem 1.4rem;
   border-radius: 10px;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -77,6 +75,7 @@
     var(--color-primary) 50%,
     var(--color-success) 100%
   );
+  padding: 10px 14px;
   color: var(--color-text);
   border: 2px solid var(--color-success);
   box-shadow: 0px 4px 10px var(--color-success);
@@ -94,7 +93,7 @@
   font-style: normal;
 }
 
-.h2Nosotros{
+.h2Nosotros {
   color: var(--color-secondary);
 }
 
