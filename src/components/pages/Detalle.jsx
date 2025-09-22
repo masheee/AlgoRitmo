@@ -45,7 +45,7 @@ const Detalle = () => {
                 {cancion.nombreCancion || cancion.titulo}
               </Card.Title>
               <Card.Subtitle className="mb-4 text-muted texto">
-                {cancion.nombreCancion || cancion.titulo}
+                {cancion.album}
               </Card.Subtitle>
               <Card.Subtitle className="mb-4 text-muted texto">
                 {cancion.artista}
