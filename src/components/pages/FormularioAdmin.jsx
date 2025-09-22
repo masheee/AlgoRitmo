@@ -39,34 +39,33 @@ const FormularioAdmin = () => {
     }
   }, [editar, location.state, setValue, reset]);
 
-  
   const onSubmit = (data) => {
-  const nuevaCancion = {
-    id: editar ? location.state.cancion.id : uuidv4(),
-    ...data,
+    const nuevaCancion = {
+      id: editar ? location.state.cancion.id : uuidv4(),
+      ...data,
+    };
+
+    const cancionesGuardadas = localStorage.getItem("canciones");
+    const canciones = cancionesGuardadas ? JSON.parse(cancionesGuardadas) : [];
+
+    if (editar) {
+      canciones[editarIndex] = nuevaCancion;
+    } else {
+      canciones.push(nuevaCancion);
+      reset(); // ✅ limpia después de crear
+    }
+
+    localStorage.setItem("canciones", JSON.stringify(canciones));
+
+    Swal.fire({
+      title: editar ? "Cambios guardados" : "Canción creada",
+      text: editar
+        ? "Los datos se actualizaron correctamente"
+        : "Tu canción fue añadida a la lista",
+      icon: "success",
+      confirmButtonText: "Ok",
+    }).then(() => navigate("/admin"));
   };
-
-  const cancionesGuardadas = localStorage.getItem("canciones");
-  const canciones = cancionesGuardadas ? JSON.parse(cancionesGuardadas) : [];
-
-  if (editar) {
-    canciones[editarIndex] = nuevaCancion;
-  } else {
-    canciones.push(nuevaCancion);
-    reset(); // ✅ limpia después de crear
-  }
-
-  localStorage.setItem("canciones", JSON.stringify(canciones));
-
-  Swal.fire({
-    title: editar ? "Cambios guardados" : "Canción creada",
-    text: editar
-      ? "Los datos se actualizaron correctamente"
-      : "Tu canción fue añadida a la lista",
-    icon: "success",
-    confirmButtonText: "Ok",
-  }).then(() => navigate("/admin"));
-};
 
   return (
     <Form
@@ -77,7 +76,7 @@ const FormularioAdmin = () => {
       <Button
         variant="outline-light"
         size="sm"
-        className="position-absolute top-0 end-0 m-3"
+        className="position-absolute top-0 end-0 m-3 btn-gradient"
         onClick={() => navigate(-1)} // vuelve atrás
       >
         ✖
@@ -192,8 +191,9 @@ const FormularioAdmin = () => {
           placeholder="https://ejemplo.com/imagen.jpg"
           {...register("imagen", {
             pattern: {
-              value: /^https?:\/\/.+\.(jpg|jpeg|png|gif)$/i,
-              message: "Debe ser una URL válida de imagen",
+              value: /^https?:\/\/.*\.(jpg|jpeg|png|webp)$/i,
+              message:
+                "Debe ser una URL válida de imagen (jpg, jpeg, png o webp)",
             },
           })}
           isInvalid={!!errors.imagen}
@@ -223,7 +223,7 @@ const FormularioAdmin = () => {
         </Form.Control.Feedback>
       </Form.Group>
       <Button type="submit" className="ms-5 btn-gradient">
-         {editar ? "Guardar Cambios" : "Crear Canción"}
+        {editar ? "Guardar Cambios" : "Crear Canción"}
       </Button>
     </Form>
   );
