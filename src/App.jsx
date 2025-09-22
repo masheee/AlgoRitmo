@@ -28,42 +28,35 @@ export default function AppLayout() {
           usuarioLogueado={usuarioLogueado}
           setUsuarioLogueado={setUsuarioLogueado}
         />
-      <main>
-        <Container>
-        <Routes>
-          <Route path="/" element={<CardCanciones />} />
-          <Route path="/detalles" element={<Detalle />} />
-          <Route
-            path="/login"
-            element={<Login setUsuarioLogueado={setUsuarioLogueado} />}
-          />
-          <Route ute
-            path="/admin"
-            element={
-              <ProtectorAdmin
-                usuarioLogueado={usuarioLogueado}
-              ></ProtectorAdmin>
-            }
-          >
-            <Route 
-            index 
-            element={<Administrador />}
-            />
-            <Route 
-              path="formulario" 
-              element={<FormularioAdmin />} />
-          </Route>
+        <main>
+          <Container>
+            <Routes>
+              <Route path="/" element={<CardCanciones />} />
+              <Route path="/detalles/:id" element={<Detalle />} />
+              <Route
+                path="/login"
+                element={<Login setUsuarioLogueado={setUsuarioLogueado} />}
+              />
+              <Route
+                ute
+                path="/admin"
+                element={
+                  <ProtectorAdmin
+                    usuarioLogueado={usuarioLogueado}
+                  ></ProtectorAdmin>
+                }
+              >
+                <Route index element={<Administrador />} />
+                <Route path="formulario" element={<FormularioAdmin />} />
+              </Route>
 
-          <Route path="/about" element={<Nosotros />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-        </Container>
-      </main>        
+              <Route path="/about" element={<Nosotros />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+          </Container>
+        </main>
         <Footer />
       </BrowserRouter>
     </>
   );
 }
-
-
-//      <main style={{ padding: "2rem 0", flex: "1" }}>

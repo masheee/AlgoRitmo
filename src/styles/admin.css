@@ -77,7 +77,7 @@ h1 {
   border-radius: 1rem;
   max-width: 600px; /* ancho máximo */
   margin: auto; /* centrar */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   color: var(--color-text);
 }
 
@@ -104,18 +104,4 @@ h1 {
 .form-container .form-control:focus {
   border-color: var(--color-accent);
   box-shadow: 0 0 0 0.25rem rgba(232, 121, 249, 0.25);
-}
-
-.form-container button {
-  background-color: var(--color-accent);
-  border: none;
-  padding: 0.7rem 1.5rem;
-  font-weight: 600;
-  border-radius: 0.5rem;
-  margin-top: 1rem;
-  transition: background 0.3s ease;
-}
-
-.form-container button:hover {
-  background-color: var(--color-primary);
 }

@@ -14,8 +14,8 @@ const NotFoundPage = () => {
             Parece que la página que buscas no existe o ha cambiado de lugar.
             No te preocupes, te ayudamos a volver al inicio.
           </p>
-          <Button as={Link} to="/" variant="primary" className="btn-back-home">
-            Volver al inicio →
+          <Button as={Link} to="/" className="btn-gradient">
+            <i className="bi bi-arrow-bar-left"> Volver al Inicio </i>
           </Button>
         </div>
       </div>
@@ -23,4 +23,5 @@ const NotFoundPage = () => {
   );
 };
 
-export default NotFoundPage;
+export default NotFoundPage; 
+

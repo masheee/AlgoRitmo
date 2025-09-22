@@ -8,6 +8,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .imgCardNosotros {
@@ -15,20 +17,22 @@
   height: 100px;
   object-fit: cover;
   border-radius: 50%;
-  display: block;
   margin-left: auto;
   margin-right: auto;
   border-color: var(--color-accent);
 }
 
 .cardNosotros:hover {
-  transform: scale(1.2);
-  transition: 600ms;
+  transform: scale(1.15);
   box-shadow: 3px 3px 20px var(--color-primary);
+  overflow: hidden;
 }
 
-.fuenteCardNosotros{
-  font-size: medium;
+.nameCardNosotros {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 60%;
 }
 
 .AlgoRitmo {
@@ -39,17 +43,27 @@
   color: var(--color-success);
 }
 
-.iconoCard:hover{
-  font-size:x-large;
-    color: var(--color-success);
-      transition: 600ms;
+.iconoCard {
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
 
+.iconoCard:hover {
+  font-size: x-large;
+  color: var(--color-success);
+  transition: 600ms;
+  transform: scale(1.3);
 }
 
 .btn-gradient {
-  background: linear-gradient(45deg, var(--color-success), #e879f9, #a78bfa);
-  color: #1e1b29;
-  border: 2px solid #a78bfa;
+  background: radial-gradient(
+    circle,
+    var(--color-accent) 50%,
+    var(--color-primary) 100%
+  );
+  color: var(--color-surface);
+  border: 2px solid var(--color-primary);
   font-weight: bold;
   padding: 0.6rem 1.4rem;
   border-radius: 10px;
@@ -58,9 +72,35 @@
 }
 
 .btn-gradient:hover {
-  background: linear-gradient(deg, #8b5cf6, #e879f9, #34d399);
-  color: #f3f4f6;
-  border: 2px solid #a78bfa;
-  box-shadow: 0 4px 15px #a78bfa;
-  transform: scale(1.05);
+  background: radial-gradient(
+    circle,
+    var(--color-primary) 50%,
+    var(--color-success) 100%
+  );
+  color: var(--color-text);
+  border: 2px solid var(--color-success);
+  box-shadow: 0px 4px 10px var(--color-success);
+  transform: scale(1.01);
+}
+
+.btn-gradient:focus {
+  border-color: var(--color-success) !important;
+}
+
+.fuenteLogo {
+  font-family: "Sometype Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.h2Nosotros{
+  color: var(--color-secondary);
+}
+
+@media (min-width: 768px) {
+  .cardNosotros:hover {
+    transform: scale(1.005);
+    transition: transform 0.3s ease;
+  }
 }

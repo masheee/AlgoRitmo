@@ -4,37 +4,43 @@ import MarianoJuarez from "../../img/MarianoJuarez.jpg";
 import MaximilianoGomezTolra from "../../img/MaximilianoGomezTolra.jpg";
 import MaximilianoGuerrero from "../../img/MaximilianoGuerrero.jpg";
 import SebastianFlomenbaun from "../../img/SebastianFlomenbaun.jpg";
-import JoseLedesma from "../../img/JoseLedesma.jpg";
+import IgnacioLedesma from "../../img/IgnacioLedesma.jpg";
 import { Link } from "react-router-dom";
 import "../../styles/nosotros.css";
 
 const Nosotros = () => {
   return (
     <section className="container">
-      <h2 className="text-center">¿Quiénes somos?</h2>
+      <h2 className="text-center my-3 h2Nosotros">¿Quiénes somos?</h2>
       <p>
-        En{" "}
-        <Link to="/" className="AlgoRitmo text-decoration-none fw-bold">
-          AlgoRitmo
+        Somos un equipo de desarrolladores apasionados por la tecnología, la
+        creatividad y como vos, también por la música. Creemos que las melodías
+        son un lenguaje universal capaz de unir personas y emociones, y quisimos
+        trasladar esa idea al mundo digital.
+      </p>
+      <p>
+        Así nació{" "}
+        <Link
+          to="/"
+          className="AlgoRitmo fuenteLogo text-decoration-none fw-bold"
+        >
+          AlgoRitmo:
         </Link>{" "}
-        creemos que la música es más que un sonido: es una experiencia que
-        conecta personas, emociones y momentos. Nuestra plataforma de streaming
-        fue creada para que disfrutes de tus canciones favoritas, descubras
-        nuevos artistas y armes listas que acompañen tu día a día.
+        una plataforma de streaming pensada para que cada usuario viva la música
+        a su manera. Desde escuchar tus canciones favoritas hasta descubrir
+        nuevos artistas y armar listas que acompañen tu día, nuestro objetivo es
+        que disfrutes de una experiencia única, sencilla y cercana.
       </p>
       <br />
       <p>
-        Porque con{" "}
-        <Link to="/" className="AlgoRitmo text-decoration-none fw-bold">
-          AlgoRitmo
-        </Link>{" "}
-        no solo escuchás música: vivís tu propio ritmo.
+        No solo construimos una App: construimos un espacio donde la música y la
+        tecnología se encuentran para acompañarte a vivir a tu propio ritmo.
       </p>
 
-      <Container className="mb-5">
-        <Row className="row-gap-3">
+      <Container className="mb-3">
+        <Row className="row-gap-3 justify-content-center">
           {/*Maxi Tolra*/}
-          <Col xs={12} md={4} lg={2}>
+          <Col xs={10} md={4} lg={2}>
             <Card className="cardNosotros h-100">
               <Card.Img
                 variant="top"
@@ -43,7 +49,7 @@ const Nosotros = () => {
                 alt="Maxi Tolra"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">
+                <Card.Title className="nameCardNosotros">
                   Maximiliano Gómez Tolra
                 </Card.Title>
                 <Row>
@@ -70,7 +76,7 @@ const Nosotros = () => {
             </Card>
           </Col>
           {/*Tali*/}
-          <Col xs={12} md={4} lg={2}>
+          <Col xs={10} md={4} lg={2}>
             <Card className="cardNosotros h-100">
               <Card.Img
                 variant="top"
@@ -79,11 +85,11 @@ const Nosotros = () => {
                 alt="Tali Cabana"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">
+                <Card.Title className="nameCardNosotros">
                   Paula Cabana
                 </Card.Title>
                 <Row>
-                  <Col xs={6} className="text-center mb-3">
+                  <Col xs={6} className="text-center">
                     <a
                       href="https://github.com/TaliCabana"
                       target="_blank"
@@ -106,7 +112,7 @@ const Nosotros = () => {
             </Card>
           </Col>
           {/*Sebas*/}
-          <Col xs={12} md={4} lg={2}>
+          <Col xs={10} md={4} lg={2}>
             <Card className="cardNosotros h-100">
               <Card.Img
                 variant="top"
@@ -115,7 +121,7 @@ const Nosotros = () => {
                 alt="Sebas Flomenbaun"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">
+                <Card.Title className="nameCardNosotros">
                   Sebastián Flomenbaun
                 </Card.Title>
                 <Row>
@@ -138,7 +144,7 @@ const Nosotros = () => {
             </Card>
           </Col>
           {/*Pollo*/}
-          <Col xs={12} md={4} lg={2}>
+          <Col xs={10} md={4} lg={2}>
             <Card className="cardNosotros h-100">
               <Card.Img
                 variant="top"
@@ -147,7 +153,7 @@ const Nosotros = () => {
                 alt="Pollo Juárez"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">
+                <Card.Title className="nameCardNosotros">
                   Mariano Juárez
                 </Card.Title>
                 <Row>
@@ -170,7 +176,7 @@ const Nosotros = () => {
             </Card>
           </Col>
           {/*Maxi G*/}
-          <Col xs={12} md={4} lg={2}>
+          <Col xs={10} md={4} lg={2}>
             <Card className="cardNosotros h-100">
               <Card.Img
                 variant="top"
@@ -179,7 +185,7 @@ const Nosotros = () => {
                 alt="Maxi Guerrero"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">
+                <Card.Title className="nameCardNosotros">
                   Maximiliano Guerrero
                 </Card.Title>
                 <Row>
@@ -201,23 +207,23 @@ const Nosotros = () => {
               </Card.Body>
             </Card>
           </Col>
-          {/*José I  Faltan imagen y links*/}
-          <Col xs={12} md={4} lg={2}>
+          {/*Nacho*/}
+          <Col xs={10} md={4} lg={2}>
             <Card className="cardNosotros h-100">
               <Card.Img
                 variant="top"
                 className="imgCardNosotros mt-3"
-                src={JoseLedesma}
+                src={IgnacioLedesma}
                 alt="José Ingnacio Ledesma Padilla"
               />
               <Card.Body>
-                <Card.Title className="fuenteCardNosotros">
-                  José Ingnacio Ledesma Padilla
+                <Card.Title className="nameCardNosotros">
+                  Ingnacio Ledesma
                 </Card.Title>
                 <Row>
                   <Col xs={6} className="text-center">
                     <a
-                      href="https://github.com/TaliCabana"
+                      href="https://github.com/ledesmapadilla"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -225,11 +231,7 @@ const Nosotros = () => {
                     </a>
                   </Col>
                   <Col xs={6} className="text-center">
-                    <a
-                      href="https://www.linkedin.com/in/paula-cabana-ingenieraindustrial/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <a href="*" target="_blank" rel="noopener noreferrer">
                       <i className="bi bi-linkedin iconoCard"></i>
                     </a>
                   </Col>
@@ -239,7 +241,11 @@ const Nosotros = () => {
           </Col>
         </Row>
       </Container>
-      <Button className="d-flex justify-content-center btn-gradient">Volver al Inicio</Button>
+      <div className="d-flex justify-content-center mb-4">
+          <Button as={Link} to="/" className="btn-gradient">
+          <i className="bi bi-arrow-bar-left"> Volver al Inicio </i>
+        </Button>
+      </div>
     </section>
   );
 };
