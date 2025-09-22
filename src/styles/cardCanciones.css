@@ -31,26 +31,37 @@
 
 .icon-overlay {
   position: absolute;
-  top: 70%;
-  left: 50%;
-  color: rgba(128, 128, 128, 0.6); 
+  top: 15%;
+  left: 85%;
+  color: rgba(248, 250, 252); 
   transform: translate(-50%, -50%);
 
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
   pointer-events: auto; 
-  font-size: 60px;
+  font-size: 40px;
+  border-radius: 50%;
+
   transition: all 0.3s ease;
 }
 
 .icon-overlay:hover {
-  color: rgba(128, 128, 128, 0.9); 
+  color: rgba(162, 128, 255); 
   transform: translate(-50%, -50%) scale(1.2);
+  box-shadow: 0 0 20px 5px rgba(162, 128, 255, 0.7);
 
 }
 
 .cardImg {
   width: 100%;
-  aspect-ratio: 1/1; 
-  object-fit: cover;  
-}
+  aspect-ratio: 1/1;
+  object-fit: cover;}
+
+
   
   
