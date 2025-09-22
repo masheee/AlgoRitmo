@@ -35,8 +35,8 @@ position: absolute;
   padding: 2rem;
   border-radius: 15px;
   text-align: center;
-  background: rgba(30, 27, 41, 0.7);
-  backdrop-filter: blur(10px);
+  background: rgba(30, 27, 41, 0.3);
+  backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(139, 92, 246, 0.2); 
 }
