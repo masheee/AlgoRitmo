@@ -29,7 +29,7 @@ const CardCanciones = () => {
 
   return (
     <div className="container">
-      <div className=" d-flex justify-content-center align-items-center mt-1">
+      <div className=" d-flex justify-content-center align-items-center mt-1  ">
         <Card.Img
           variant="top"
           className="imagenPpal"
@@ -37,27 +37,30 @@ const CardCanciones = () => {
           alt="Imagen recital"
         />
       </div>
-      <div className="text-center my-4">
+      <div className="text-center my-5">
         <h2>¡BUSCA TU TEMA FAVORITO!</h2>
       </div>
 
       {/* buscador */}
+
       <div className="mb-5 d-flex justify-content-center">
-        <Form className="d-flex justify-content-center w-75 " role="search">
+        <Form className="d-flex justify-content-center w-50 " role="search">
+          <div className="input-group">
           <Form.Control
             type="search"
             placeholder="Elegí una canción"
-            className="me-2 w-75 buscarPpal"
+            className="me-2 w-50 buscarPpal"
             aria-label="Search"
             value={busqueda}
             onChange={(e) => setBusqueda(e.target.value)}
           />
           <Button
-            className="btn-gradient"
+            className="btn-gradient m-0"
             onClick={() => setBusqueda("")}
           >
             Buscá otra
           </Button>
+          </div>
         </Form>
       </div>
       
@@ -79,10 +82,10 @@ const CardCanciones = () => {
                     <Card.Img
                       variant="top"
                       src={cancion.imagen}
-                      className="img-fluid cardImg"
+                      className="img-fluid "
                     />
                     <Link to="/NotFoundPage" className="icon-overlay-link">
-                      <i className="bi bi-play-circle  text-gray icon-overlay "></i>
+                      <i className="bi bi-play-circle  icon-overlay "></i>
                     </Link>
                   </div>
                   <Card.Body className="d-flex flex-column align-items-center text-center ">
@@ -93,7 +96,7 @@ const CardCanciones = () => {
                     <Button
                       as={Link}
                       to={`/detalles/${cancion.id}`}
-                      className="btn-login w-50"
+                      className="btn-gradient"
                     >
                       Conocé más
                     </Button>
