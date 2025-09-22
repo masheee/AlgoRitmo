@@ -8,14 +8,14 @@
 }
 
 .not-found-content {
-  position: relative;
+   position: relative;
   width: 100%;
   max-width: 500px;
   height: 500px;
 }
 
 .not-found-image {
-  position: absolute;
+position: absolute;
   width: 100%;
   left: 50%;
   top: 25%;
@@ -25,12 +25,12 @@
 }
 
 .not-found-card {
-  position: absolute;
+position: absolute;
   width: 120%;
   max-width: 650px;
   left: 50%;
-  top: 60%;
-  transform: translate(-50%, -50%);
+  top: 70%;
+  transform: translate(-50%, -60%);
   z-index: 2;
   padding: 2rem;
   border-radius: 15px;
@@ -38,7 +38,7 @@
   background: rgba(30, 27, 41, 0.7);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(139, 92, 246, 0.2);
+  border: 1px solid rgba(139, 92, 246, 0.2); 
 }
 
 .not-found-card h2 {
@@ -52,14 +52,4 @@
   color: var(--color-muted);
   margin-bottom: 1.5rem;
 }
-
-/* .btn-back-home {
-  background-color: var(--color-primary);
-  border: none;
-  padding: 0.75rem 1.5rem;
-}
-
-.btn-back-home:hover {
-  background-color: var(--color-accent);
-} */
 

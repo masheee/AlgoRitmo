@@ -29,7 +29,7 @@ const CardCanciones = () => {
 
   return (
     <div className="container">
-      <div className=" d-flex justify-content-center align-items-center mt-1  ">
+      <div className=" d-flex justify-content-center align-items-center mt-1">
         <Card.Img
           variant="top"
           className="imagenPpal"
@@ -37,18 +37,17 @@ const CardCanciones = () => {
           alt="Imagen recital"
         />
       </div>
-      <div className="text-center my-5">
+      <div className="text-center my-4">
         <h2>¡BUSCA TU TEMA FAVORITO!</h2>
       </div>
 
       {/* buscador */}
-
       <div className="mb-5 d-flex justify-content-center">
-        <Form className="d-flex justify-content-center w-50 " role="search">
+        <Form className="d-flex justify-content-center w-75 " role="search">
           <Form.Control
             type="search"
             placeholder="Elegí una canción"
-            className="me-2 w-50 buscarPpal"
+            className="me-2 w-75 buscarPpal"
             aria-label="Search"
             value={busqueda}
             onChange={(e) => setBusqueda(e.target.value)}

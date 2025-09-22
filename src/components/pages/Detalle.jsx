@@ -24,7 +24,7 @@ const Detalle = () => {
 
   return (
     <>
-      <Card className="my-3 p-3 shadow-sm fondo-detalle">
+      <Card className="my-2 p-3 shadow-sm fondo-detalle">
         <Row>
           {/* Imagen de la canción */}
           <Col
@@ -67,9 +67,11 @@ const Detalle = () => {
           </Col>
         </Row>
       </Card>
-      <button className="btn boton-detalle btn-gradient" onClick={() => navigate("/")}>
+      <div className="d-flex justify-content-center">
+      <button className="justify-content-items-center btn-gradient mb-4" onClick={() => navigate("/")}>
         <i className="bi bi-arrow-bar-left"> Volver al inicio </i>
       </button>
+      </div>
     </>
   );
 };
