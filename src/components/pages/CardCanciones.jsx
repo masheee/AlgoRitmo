@@ -44,18 +44,18 @@ const CardCanciones = () => {
       {/* buscador */}
 
       <div className="mb-5 d-flex justify-content-center">
-        <Form className="d-flex justify-content-center w-50 " role="search">
-          <div className="input-group">
+        <Form className="d-flex w-100 justify-content-center" role="search">
+          <div className="input-group flex-nowrap w-75 w-sm-50">
           <Form.Control
             type="search"
             placeholder="Elegí una canción"
-            className="me-2 w-50 buscarPpal"
+            className="me-2 buscarPpal"
             aria-label="Search"
             value={busqueda}
             onChange={(e) => setBusqueda(e.target.value)}
           />
           <Button
-            className="btn-gradient m-0"
+            className="btn-gradient"
             onClick={() => setBusqueda("")}
           >
             Buscá otra
