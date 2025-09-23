@@ -81,7 +81,7 @@ const CardCanciones = () => {
                   <div className="botonPlay">
                     <Card.Img
                       variant="top"
-                      src={cancion.imagen}
+                      src={cancion.imagen || "/defecto.png"}
                       className="img-fluid cardImg"
                     />
                     <Link to="/NotFoundPage" className="icon-overlay-link">
