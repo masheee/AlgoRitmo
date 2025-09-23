@@ -80,5 +80,7 @@
   flex: 1;
 }
 
-
-
+.form-container .form-control:focus {
+  border-color: var(--color-primary);
+  box-shadow: 3px 3px 20px var(--color-primary);
+}
