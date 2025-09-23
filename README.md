@@ -1,6 +1,6 @@
 # 🎶 AlgoRitmo  
 
-![AlgoRitmo Banner](https://via.placeholder.com/1000x250/6A0DAD/FFFFFF?text=AlgoRitmo+-+Tu+soundtrack+personal))  
+![AlgoRitmo Banner](https://via.placeholder.com/1000x250/6A0DAD/FFFFFF?text=AlgoRitmo+-+Tu+soundtrack+personal)  
 
 **AlgoRitmo** te invita a redescubrir la música. Más que una simple base de datos, es tu espacio personal para curar el soundtrack de tu vida.  
 
@@ -16,15 +16,15 @@ Este proyecto fue desarrollado por un talentoso equipo:
 
 - [GOMEZ TOLRÁ, Maximiliano](https://github.com/masheee)
 
-- [GUERRERO, Maximiliano](_https://github.com/maxiguerrero767_)
+- [GUERRERO, Maximiliano](https://github.com/maxiguerrero767)
 
 - [JUÁREZ, Mariano](https://github.com/cmjuarez95)
 
-- [CABANA, Paula](_https://github.com/TaliCabana_) 
+- [CABANA, Paula](https://github.com/TaliCabana) 
 
-- [FLOMENBAUN, Sebastián](_https://github.com/duncann555_)
+- [FLOMENBAUN, Sebastián](https://github.com/duncann555)
 
-- [LEDESMA PADILLA, José Ignacio](_https://github.com/ledesmapadilla_)
+- [LEDESMA PADILLA, José Ignacio](https://github.com/ledesmapadilla)
 
 ---
 
