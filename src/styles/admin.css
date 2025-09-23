@@ -94,7 +94,7 @@ h1 {
 
 .form-container .form-control {
   background-color: var(--color-bg);
-  border: 1px solid var(--color-secondary);
+  border: 1px solid var(--color-primary);
   color: var(--color-text);
   border-radius: 10px;
   padding: 7px 15px;
@@ -102,6 +102,7 @@ h1 {
 }
 
 .form-container .form-control:focus {
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 0.25rem rgba(232, 121, 249, 0.25);
+  border-color: var(--color-primary);
+  box-shadow: 3px 3px 20px var(--color-primary);
 }
+

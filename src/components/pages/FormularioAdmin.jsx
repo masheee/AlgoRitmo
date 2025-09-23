@@ -67,7 +67,7 @@ const FormularioAdmin = () => {
         ? "Los datos se actualizaron correctamente"
         : "Tu canción fue añadida a la lista",
       icon: "success",
-      confirmButtonText: "Ok",
+      confirmButtonText: "Sí, eliminar",
     }).then(() => navigate("/admin"));
   };
 

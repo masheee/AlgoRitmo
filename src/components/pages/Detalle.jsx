@@ -1,8 +1,9 @@
-import { Card, Row, Col } from "react-bootstrap";
+import { Card, Row, Col, Button } from "react-bootstrap";
 import "../../styles/detalle.css";
 import { useEffect, useState } from "react";
 import canciones from "../../Data/CancionesInicio";
 import { useParams, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Detalle = () => {
   const { id } = useParams();
@@ -67,10 +68,10 @@ const Detalle = () => {
           </Col>
         </Row>
       </Card>
-      <div className="d-flex justify-content-center">
-      <button className="justify-content-items-center btn-gradient mb-4" onClick={() => navigate("/")}>
-        <i className="bi bi-arrow-bar-left"> Volver al inicio </i>
-      </button>
+      <div className="d-flex justify-content-center my-3">
+          <Button as={Link} to="/" className="btn-gradient">
+          <i className="bi bi-arrow-bar-left"> Volver al Inicio </i>
+        </Button>
       </div>
     </>
   );
