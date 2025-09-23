@@ -24,7 +24,7 @@ const Detalle = () => {
 
   return (
     <>
-      <Card className="my-2 p-3 shadow-sm fondo-detalle">
+      <Card className="mt-5 p-3 shadow-sm fondo-detalle">
         <Row>
           {/* Imagen de la canción */}
           <Col
@@ -32,7 +32,7 @@ const Detalle = () => {
             className="d-flex align-items-center justify-content-center"
           >
             <Card.Img
-              src={cancion.imagen}
+              src={cancion.imagen || "/defecto.png"}
               alt="Portada de cancion"
               className="img-fluid rounded detalleImg"
             />
@@ -41,26 +41,26 @@ const Detalle = () => {
           {/* Información de la canción */}
           <Col md={8}>
             <Card.Body>
-              <Card.Title className="fs-3 mb-4 texto-detalle ">
+              <Card.Title className="fs-1 mb-4 texto-detalle ">
                 {cancion.nombreCancion || cancion.titulo}
               </Card.Title>
-              <Card.Subtitle className="mb-4 text-muted texto">
+              <Card.Subtitle className="fs-3 mb-4 text-muted texto">
                 {cancion.album}
               </Card.Subtitle>
-              <Card.Subtitle className="mb-4 text-muted texto">
+              <Card.Subtitle className="fs-3 mb-4 text-muted texto">
                 {cancion.artista}
               </Card.Subtitle>
 
               <hr />
 
-              <p>
+              <p className="fs-4">
                 <strong>Duración:</strong>{" "}
                 {cancion.duracionCancion || cancion.duracion}
               </p>
-              <p>
+              <p className="fs-4">
                 <strong>Género:</strong> {cancion.categoria}
               </p>
-              <p>
+              <p className="fs-4">
                 <strong>Año:</strong> {cancion.anio}
               </p>
             </Card.Body>

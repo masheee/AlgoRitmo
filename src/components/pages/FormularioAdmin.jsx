@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import { useNavigate, useLocation } from "react-router-dom";
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
+
 import "../../styles/admin.css";
 
 const FormularioAdmin = () => {
@@ -39,10 +40,13 @@ const FormularioAdmin = () => {
     }
   }, [editar, location.state, setValue, reset]);
 
+  const imagenDefecto = "/defecto.png"
+
   const onSubmit = (data) => {
     const nuevaCancion = {
       id: editar ? location.state.cancion.id : uuidv4(),
       ...data,
+      imagen: data.imagen && data.imagen.trim() !== "" ? data.imagen : imagenDefecto 
     };
 
     const cancionesGuardadas = localStorage.getItem("canciones");
