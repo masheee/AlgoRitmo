@@ -214,11 +214,11 @@ const Nosotros = () => {
                 variant="top"
                 className="imgCardNosotros mt-3"
                 src={IgnacioLedesma}
-                alt="José Ingnacio Ledesma Padilla"
+                alt="José Ignacio Ledesma Padilla"
               />
               <Card.Body>
                 <Card.Title className="nameCardNosotros">
-                  Ingnacio Ledesma
+                  Ignacio Ledesma
                 </Card.Title>
                 <Row>
                   <Col xs={6} className="text-center">
