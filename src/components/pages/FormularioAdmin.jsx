@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
 
 import "../../styles/admin.css";
-
+import "../../styles/sweetalert.css";
 const FormularioAdmin = () => {
   const {
     register,
@@ -40,13 +40,14 @@ const FormularioAdmin = () => {
     }
   }, [editar, location.state, setValue, reset]);
 
-  const imagenDefecto = "/defecto.png"
+  const imagenDefecto = "/defecto.png";
 
   const onSubmit = (data) => {
     const nuevaCancion = {
       id: editar ? location.state.cancion.id : uuidv4(),
       ...data,
-      imagen: data.imagen && data.imagen.trim() !== "" ? data.imagen : imagenDefecto 
+      imagen:
+        data.imagen && data.imagen.trim() !== "" ? data.imagen : imagenDefecto,
     };
 
     const cancionesGuardadas = localStorage.getItem("canciones");
@@ -67,7 +68,11 @@ const FormularioAdmin = () => {
         ? "Los datos se actualizaron correctamente"
         : "Tu canción fue añadida a la lista",
       icon: "success",
-      confirmButtonText: "Sí, eliminar",
+      confirmButtonText: "OK",
+      customClass: {
+        popup: "swal-popup-custom",
+        confirmButton: "btn-swal-confirm",
+      },
     }).then(() => navigate("/admin"));
   };
 
