@@ -5,7 +5,7 @@ import Form from "react-bootstrap/Form";
 import canciones from "../../Data/CancionesInicio.js";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import "../../styles/CardCanciones.css";
+import "../../styles/cardCanciones.css";
 
 const CardCanciones = () => {
   const [busqueda, setBusqueda] = useState("");
