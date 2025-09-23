@@ -39,11 +39,15 @@ Este proyecto fue desarrollado por un talentoso equipo:
 
 ## 🛠️ Tecnologías Utilizadas  
 
-![HTML](https://img.shields.io/badge/HTML-5-6A0DAD?logo=html5&logoColor=white&style=for-the-badge))  
+![HTML](https://img.shields.io/badge/HTML-5-6A0DAD?logo=html5&logoColor=white&style=for-the-badge)  
 
-![CSS](https://img.shields.io/badge/CSS-3-6A0DAD?logo=css3&logoColor=white&style=for-the-badge))  
+![CSS](https://img.shields.io/badge/CSS-3-6A0DAD?logo=css3&logoColor=white&style=for-the-badge)  
 
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6-6A0DAD?logo=javascript&logoColor=white&style=for-the-badge))  
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-6A0DAD?logo=javascript&logoColor=white&style=for-the-badge)  
+
+![React](https://img.shields.io/badge/React-18-6A0DAD?logo=react&logoColor=white&style=for-the-badge)  
+
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-6A0DAD?logo=bootstrap&logoColor=white&style=for-the-badge)  
 
 ---
 
