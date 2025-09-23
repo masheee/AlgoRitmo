@@ -1,6 +1,5 @@
 # 🎶 AlgoRitmo  
 
-![AlgoRitmo Banner](https://via.placeholder.com/1000x250/6A0DAD/FFFFFF?text=AlgoRitmo+-+Tu+soundtrack+personal)  
 
 **AlgoRitmo** te invita a redescubrir la música. Más que una simple base de datos, es tu espacio personal para curar el soundtrack de tu vida.  
 
