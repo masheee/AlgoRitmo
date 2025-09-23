@@ -45,28 +45,6 @@ useEffect(() => {
     }
   }, []);
 
-  // ✅ Borrar canción
-  // const handleDelete = (index) => {
-  //   Swal.fire({
-  //     title: "¿Estás seguro?",
-  //     text: "Esta acción no se puede deshacer",
-  //     icon: "warning",
-  //     showCancelButton: true,
-  //     confirmButtonColor: "#3085d6",
-  //     cancelButtonColor: "#d33",
-  //     confirmButtonText: "Sí, eliminar",
-  //     cancelButtonText: "Cancelar"
-  //   }).then((result) => {
-  //     if (result.isConfirmed) {
-  //       const cancionActual = [...canciones];
-  //       cancionActual.splice(index, 1);
-  //       localStorage.setItem("canciones", JSON.stringify(cancionActual));
-  //       setCanciones(cancionActual);
-
-  //       Swal.fire("Eliminada", "La canción fue eliminada correctamente", "success");
-  //     }
-  //   });
-  // };
   const handleDelete = (index) => {
     Swal.fire({
       title: "¿Estás seguro?",
