@@ -47,14 +47,14 @@ const LoginPage = ({ setUsuarioLogueado }) => {
         <Modal.Title>Iniciar Sesión</Modal.Title>
       </Modal.Header>
       <Modal.Body className="login-body">
-        <Form onSubmit={handleSubmit(onSubmit)}>
+        <Form onSubmit={handleSubmit(onSubmit)} className="form-container">
           {/* Email */}
           <Form.Group className="mb-3" controlId="formEmail">
             <Form.Label>Correo electrónico</Form.Label>
             <Form.Control
               type="email"
               placeholder="ejemplo@email.com"
-              className="login-input"
+              className="form-control login-input"
               {...register("email", {
                 required: "El correo es un dato obligatorio",
                 pattern: {
@@ -74,9 +74,9 @@ const LoginPage = ({ setUsuarioLogueado }) => {
           <Form.Group className="mb-3" controlId="formPassword">
             <Form.Label>Contraseña</Form.Label>
             <Form.Control
-              className="login-input"
               type="password"
               placeholder="********"
+              className="form-control login-input"
               {...register("password", {
                 required: "La contraseña es obligatoria",
                 pattern: {
