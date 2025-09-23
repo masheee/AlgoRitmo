@@ -3,6 +3,7 @@ import { Button, Form, Table } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import "../../styles/admin.css";
+import "../../styles/sweetalert.css"
 
 
 const Administrador = () => {
@@ -45,16 +46,43 @@ useEffect(() => {
   }, []);
 
   // ✅ Borrar canción
+  // const handleDelete = (index) => {
+  //   Swal.fire({
+  //     title: "¿Estás seguro?",
+  //     text: "Esta acción no se puede deshacer",
+  //     icon: "warning",
+  //     showCancelButton: true,
+  //     confirmButtonColor: "#3085d6",
+  //     cancelButtonColor: "#d33",
+  //     confirmButtonText: "Sí, eliminar",
+  //     cancelButtonText: "Cancelar"
+  //   }).then((result) => {
+  //     if (result.isConfirmed) {
+  //       const cancionActual = [...canciones];
+  //       cancionActual.splice(index, 1);
+  //       localStorage.setItem("canciones", JSON.stringify(cancionActual));
+  //       setCanciones(cancionActual);
+
+  //       Swal.fire("Eliminada", "La canción fue eliminada correctamente", "success");
+  //     }
+  //   });
+  // };
   const handleDelete = (index) => {
     Swal.fire({
       title: "¿Estás seguro?",
       text: "Esta acción no se puede deshacer",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
       confirmButtonText: "Sí, eliminar",
-      cancelButtonText: "Cancelar"
+      cancelButtonText: "Cancelar",
+      // --- INICIO DE CAMBIOS ---
+      customClass: {
+        popup: 'swal-popup-custom',
+        confirmButton: 'btn-swal-confirm', // Botón verde de éxito/confirmar
+        cancelButton: 'btn-swal-cancel'    // Botón rojo de peligro/cancelar
+      }
+      // Se eliminan 'confirmButtonColor' y 'cancelButtonColor'
+      // --- FIN DE CAMBIOS ---
     }).then((result) => {
       if (result.isConfirmed) {
         const cancionActual = [...canciones];
@@ -62,7 +90,18 @@ useEffect(() => {
         localStorage.setItem("canciones", JSON.stringify(cancionActual));
         setCanciones(cancionActual);
 
-        Swal.fire("Eliminada", "La canción fue eliminada correctamente", "success");
+        // También estilizamos la alerta de éxito
+        Swal.fire({
+            title: "Eliminada", 
+            text: "La canción fue eliminada correctamente", 
+            icon: "success",
+            // --- INICIO DE CAMBIOS ---
+            customClass: {
+              popup: 'swal-popup-custom',
+              confirmButton: 'btn-swal-confirm'
+            }
+            // --- FIN DE CAMBIOS ---
+        });
       }
     });
   };
