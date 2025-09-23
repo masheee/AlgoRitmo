@@ -1,10 +1,31 @@
-import { Card, Row, Col } from "react-bootstrap";
+import { Card, Row, Col, Button } from "react-bootstrap";
 import "../../styles/detalle.css";
+import { useEffect, useState } from "react";
+import canciones from "../../Data/CancionesInicio";
+import { useParams, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Detalle = () => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const [cancion, setCancion] = useState(null);
+
+  useEffect(() => {
+    const cancionesGuardadas =
+      JSON.parse(localStorage.getItem("canciones")) || [];
+    const todas = [...canciones, ...cancionesGuardadas];
+
+    const encontrada = todas.find((item) => String(item.id) === id);
+    setCancion(encontrada);
+  }, [id]);
+
+  if (!cancion) {
+    return <h2 className="text-center mt-5">Canción no encontrada</h2>;
+  }
+
   return (
     <>
-      <Card className="my-3 p-3 shadow-sm fondo-detalle">
+      <Card className="mt-5 p-3 shadow-sm fondo-detalle">
         <Row>
           {/* Imagen de la canción */}
           <Col
@@ -12,37 +33,46 @@ const Detalle = () => {
             className="d-flex align-items-center justify-content-center"
           >
             <Card.Img
-              src="https://cdn-images.dzcdn.net/images/cover/7b7321890dcb7f7f7298ae48d67f2d50/1900x1900-000000-80-0-0.jpg"
-              alt="Imagen de la canción"
-              className="img-fluid rounded"
+              src={cancion.imagen || "/defecto.png"}
+              alt="Portada de cancion"
+              className="img-fluid rounded detalleImg"
             />
           </Col>
 
           {/* Información de la canción */}
           <Col md={8}>
             <Card.Body>
-              <Card.Title className="fs-1 mb-4 texto-detalle">Microdancing</Card.Title>
-              <Card.Subtitle className="fs-4 mb-4 text-muted texto">Mucho</Card.Subtitle>
-              <Card.Subtitle className="fs-4 mb-4 text-muted texto">
-                Babasonicos
+              <Card.Title className="fs-1 mb-4 texto-detalle ">
+                {cancion.nombreCancion || cancion.titulo}
+              </Card.Title>
+              <Card.Subtitle className="fs-3 mb-4 text-muted texto">
+                {cancion.album}
+              </Card.Subtitle>
+              <Card.Subtitle className="fs-3 mb-4 text-muted texto">
+                {cancion.artista}
               </Card.Subtitle>
 
-              <hr/>
+              <hr />
 
-              <p className="fs-5">
-                <strong>Duración:</strong> 4:22
+              <p className="fs-4">
+                <strong>Duración:</strong>{" "}
+                {cancion.duracionCancion || cancion.duracion}
               </p>
-              <p className="fs-5">
-                <strong>Género:</strong> Rock
+              <p className="fs-4">
+                <strong>Género:</strong> {cancion.categoria}
               </p>
-              <p className="fs-5">
-                <strong>Año:</strong> 2014
+              <p className="fs-4">
+                <strong>Año:</strong> {cancion.anio}
               </p>
             </Card.Body>
           </Col>
         </Row>
       </Card>
-      <button className="btn boton-detalle"><i className="bi bi-arrow-bar-left"> Volver al inicio </i></button>
+      <div className="d-flex justify-content-center my-3">
+          <Button as={Link} to="/" className="btn-gradient">
+          <i className="bi bi-arrow-bar-left"> Volver al Inicio </i>
+        </Button>
+      </div>
     </>
   );
 };

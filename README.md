@@ -1,12 +1,74 @@
-# React + Vite
+# 🎶 AlgoRitmo  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+**AlgoRitmo** te invita a redescubrir la música. Más que una simple base de datos, es tu espacio personal para curar el soundtrack de tu vida.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Con un nombre que juega con la esencia de la **lógica** y el **ritmo**, esta plataforma te permite gestionar tus canciones favoritas de forma intuitiva.  
 
-## Expanding the ESLint configuration
+Crea, edita y revive esos temas que te transportan a tus mejores recuerdos.  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 👥 Autores  
+
+Este proyecto fue desarrollado por un talentoso equipo:  
+
+- [GOMEZ TOLRÁ, Maximiliano](https://github.com/masheee)
+
+- [GUERRERO, Maximiliano](https://github.com/maxiguerrero767)
+
+- [JUÁREZ, Mariano](https://github.com/cmjuarez95)
+
+- [CABANA, Paula](https://github.com/TaliCabana) 
+
+- [FLOMENBAUN, Sebastián](https://github.com/duncann555)
+
+- [LEDESMA PADILLA, José Ignacio](https://github.com/ledesmapadilla)
+
+---
+
+## 🚀 Funcionalidades destacadas  
+
+- **Crear nuevas canciones**: Agrega tus temas a una base de datos personal.  
+
+- **Editar detalles**: Actualiza la información para mantener tus colecciones al día.  
+
+- **Eliminar canciones**: Limpia tu lista y deja solo lo que realmente te inspira.  
+
+---
+
+## 🛠️ Tecnologías Utilizadas  
+
+![HTML](https://img.shields.io/badge/HTML-5-6A0DAD?logo=html5&logoColor=white&style=for-the-badge))  
+
+![CSS](https://img.shields.io/badge/CSS-3-6A0DAD?logo=css3&logoColor=white&style=for-the-badge))  
+
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-6A0DAD?logo=javascript&logoColor=white&style=for-the-badge))  
+
+---
+
+## 🔗 Enlaces Útiles  
+
+![GitHub](https://img.shields.io/badge/GitHub-Repo-6A0DAD?logo=github&logoColor=white&style=for-the-badge)) → [Repositorio en GitHub](https://github.com/masheee/AlgoRitmo))  
+
+![Netlify](https://img.shields.io/badge/Netlify-Sitio-6A0DAD?logo=netlify&logoColor=white&style=for-the-badge)) → [Sitio desplegado](https://algoritmo-c13.netlify.app/))  
+
+---
+
+## 📌 Cómo Usarlo  
+
+Para clonar este repositorio y ejecutarlo en tu máquina local, sigue estos pasos:  
+
+```bash
+
+# 1. Abre tu terminal
+
+# 2. Clona el repositorio
+
+git clone https://github.com/masheee/AlgoRitmo.git  
+
+# 3. Ingresa al directorio del proyecto
+
+cd AlgoRitmo  
+
+# 4. Abre el archivo index.html en tu navegador

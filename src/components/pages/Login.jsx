@@ -3,6 +3,7 @@ import { Modal, Button, Form } from "react-bootstrap";
 import { Google, Facebook } from "react-bootstrap-icons";
 import { useForm } from "react-hook-form";
 import "../../styles/Login.css";
+import "../../styles/sweetalert.css"
 import { data, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -17,29 +18,37 @@ const LoginPage = ({ setUsuarioLogueado }) => {
     formState: { errors },
   } = useForm();
 
-  const navegacion = useNavigate()
+  const navegacion = useNavigate();
 
   const onSubmit = (data) => {
-    console.log(data);
-    if (
-      data.email === import.meta.env.VITE_API_EMAIL &&
-      data.password === import.meta.env.VITE_API_PASSWORD
-    ) {
-      setUsuarioLogueado(true);
-      Swal.fire({
-        title: "Bienvenido a la administración de AlgoRitmo",
-        text: "Iniciaste sesión correctamente",
-        icon: "success",
-      });
-      navegacion ("/admin")
-    } else {
-      Swal.fire({
-        title: "Ocurrió un error",
-        text: "Credenciales incorrectas",
-        icon: "error",
-      });
-    }
-  };
+  console.log(data);
+  if (
+    data.email === import.meta.env.VITE_API_EMAIL &&
+    data.password === import.meta.env.VITE_API_PASSWORD
+  ) {
+    setUsuarioLogueado(true);
+    Swal.fire({
+      title: "Bienvenido a la administración de AlgoRitmo",
+      text: "Iniciaste sesión correctamente",
+      icon: "success",
+      customClass: {
+        popup: 'swal-popup-custom',
+        confirmButton: 'btn-swal-confirm'
+      }
+    });
+    navegacion("/admin");
+  } else {
+    Swal.fire({
+      title: "Ocurrió un error",
+      text: "Credenciales incorrectas",
+      icon: "error",
+      customClass: {
+        popup: 'swal-popup-custom',
+        confirmButton: 'btn-swal-cancel' 
+      }
+    });
+  }
+};
 
   return (
     <Modal show={show} onHide={handleClose} centered className="login-modal">
@@ -92,7 +101,7 @@ const LoginPage = ({ setUsuarioLogueado }) => {
             </Form.Text>
           </Form.Group>
 
-          <Button type="submit" className="btn-login w-100">
+          <Button type="submit" className="btn-login w-100 btn-gradient">
             Ingresar
           </Button>
         </Form>
