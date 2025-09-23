@@ -14,7 +14,7 @@ Crea, edita y revive esos temas que te transportan a tus mejores recuerdos.
 
 Este proyecto fue desarrollado por un talentoso equipo:  
 
-- [GÓMEZ TOLRÁ, Maximiliano](https://github.com/masheee)
+- [GOMEZ TOLRÁ, Maximiliano](https://github.com/masheee)
 
 - [GUERRERO, Maximiliano](_https://github.com/maxiguerrero767_)
 
